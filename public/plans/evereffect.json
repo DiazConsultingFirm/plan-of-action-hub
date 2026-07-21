@@ -1,0 +1,359 @@
+{
+  "plan": {
+    "id": "evereffect",
+    "company": "EverEffect",
+    "role": "Business Development Manager",
+    "mark": "EE",
+    "accent": "#3BA55C",
+    "title": "EverEffect Plan of Action",
+    "subtitle": "Territory Thesis + Revenue Architecture",
+    "audience": "For Chris Bross, Thomas Heed & Collin · Panel Interview",
+    "author": "Evans Diaz · DCF",
+    "date": "July 2026",
+    "version": "v1.0",
+    "status": "ready",
+    "statusLabel": "Interview Artifact",
+    "interviewDate": "2026-07-23",
+    "interviewLabel": "Thu Jul 23, 2026 · 12:00–1:00 PM EDT · Google Meet",
+    "stage": "Panel Interview",
+    "tabs": [
+      "rhythm",
+      "funnel",
+      "content",
+      "audit",
+      "milestones",
+      "pitch"
+    ],
+    "dataNote": "Volume and conversion figures on the Funnel tab are targets Evans is proposing and committing to — not EverEffect internals. No internal agency numbers were available before the call. Every named account, trigger and site finding is publicly sourced and dated.",
+    "repoUrl": "",
+    "dashboardUrl": "",
+    "links": [
+      {
+        "label": "EverEffect — the agency this plan is written for",
+        "url": "https://www.evereffect.com/"
+      },
+      {
+        "label": "Diaz Consulting Firm",
+        "url": "https://diazconsultingfirm.github.io/"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "val": "7",
+      "lbl": "Indiana accounts mapped"
+    },
+    {
+      "val": "695",
+      "lbl": "U.S. agency M&A deals, 2025"
+    },
+    {
+      "val": "14 mo",
+      "lbl": "Since last evereffect.com post"
+    },
+    {
+      "val": "Monthly",
+      "lbl": "Quota cadence"
+    }
+  ],
+  "fiveFs": [
+    {
+      "letter": "F",
+      "name": "Focus",
+      "color": "gold",
+      "desc": "Are we spending time on the right opportunities with the right people? This is the ICP gate. If an account doesn't match the Focus criteria, I don't prospect it — no matter how good the logo looks.",
+      "action": "EverEffect ICP: Indiana and adjacent-metro insurance agencies, home-services and HVAC operators, and small-to-mid law firms that just completed a merger or PE recap. Say no to: national law firms with in-house marketing and procurement, enterprise RFP processes, anyone whose buying decision runs through a committee EverEffect will never meet."
+    },
+    {
+      "letter": "F",
+      "name": "Field",
+      "color": "blue",
+      "desc": "Do I have the right tools and resources? Field is the stack that makes the seat dangerous — and for a solo BDM seat, the stack is the team.",
+      "action": "EverEffect setup: Google Suite and Basecamp as the operating spine (both named in the posting). Trigger monitoring on Insurance Journal, PR Newswire and Indiana Secretary of State filings. A standing GBP/local-pack diagnostic I can run on any target in ten minutes and attach to the first email."
+    },
+    {
+      "letter": "F",
+      "name": "Fundamentals",
+      "color": "green",
+      "desc": "Am I doing the right things right, consistently? Discovery, qualification, positioning, proposal. This is the playbook, and it has to be tight before volume means anything.",
+      "action": "EverEffect fundamentals: the merger-fragmentation diagnostic on every target before outreach. Discovery that names the revenue cost of split local rankings, not the SEO symptom. One proposal shape, priced against recovered lead volume — because \"profits, not promises\" has to survive contact with a proposal."
+    },
+    {
+      "letter": "F",
+      "name": "Forecast",
+      "color": "purple",
+      "desc": "Can I predict the month before it ends? A monthly quota gives you no room to discover in week four that the month was already lost in week one.",
+      "action": "EverEffect KPIs: triggers logged → fragmentation-qualified → discovery held → proposal delivered → closed. Each conversion rate tracked weekly, not monthly. If discovery-to-proposal slips, the fix is qualification, not more dials."
+    },
+    {
+      "letter": "F",
+      "name": "Fun",
+      "color": "pink",
+      "desc": "Do people want to show up, do their best, stay, and advocate? A remote solo seat can go quiet fast. Culture here is the discipline of staying visible without being asked.",
+      "action": "EverEffect culture: a short written Friday recap to Chris and Thomas — what moved, what stalled, what I'm changing. Wins shared with the delivery team by name, because in an agency the retention story is the sales story. Classic Auto Insurance is a 15-year client; that is a delivery win a seller should be celebrating out loud."
+    }
+  ],
+  "rhythmStory": "The 5 F's is the same weekly rhythm I ran at Magic to take two below-quota reps to consistent attainment inside a quarter. In a solo BDM seat it runs on myself instead of a team: Monday morning, twenty minutes, same five questions in the same order. Focus — which accounts this week and why. Field — what am I missing. Fundamentals — which skill am I working. Forecast — does the month still close. Fun — one win to send to the team. It works because it is predictable, and because a monthly quota punishes anyone who finds out late.",
+  "funnelStory": "EverEffect's funnel problem is not awareness, it is timing. SMB owners don't wake up wanting a Local SEO engagement — they buy when something breaks. Indiana's insurance and home-services M&A wave breaks it on a schedule you can watch in public: OPTIS tracked 695 U.S. agency M&A deals in 2025, $4.3B in value, up 27% year over year, with private equity involved in 69% of them. When two agencies merge, their digital presence does not. Two Google Business Profiles, two websites, local rankings split across the legacy names, review history stranded on the profile nobody updates. That is a GBP-management, Local SEO and web-design engagement arriving on a known clock. The funnel below starts at the trigger, not at the cold list.",
+  "funnelStages": [
+    {
+      "bar": "Triggered Accounts Logged",
+      "width": 100,
+      "num": "60/mo",
+      "math": "(Insurance Journal · PR Newswire · IN SoS filings · PE announcements)",
+      "color": "gold"
+    },
+    {
+      "bar": "Fragmentation Gate",
+      "width": 42,
+      "num": "25/mo",
+      "math": "(~40% survive the live GBP + site check — target)",
+      "color": "amber",
+      "gate": true
+    },
+    {
+      "bar": "Discovery Calls Held",
+      "width": 20,
+      "num": "8–10/mo",
+      "math": "(~35–40% of qualified outreach — target)",
+      "color": "blue"
+    },
+    {
+      "bar": "Proposals Delivered",
+      "width": 12,
+      "num": "4–5/mo",
+      "math": "(~50% of discovery — target)",
+      "color": "green",
+      "gate": true
+    },
+    {
+      "bar": "Closed Won",
+      "width": 7,
+      "num": "1–2/mo",
+      "math": "(retainer + project — target, first close by day 60)",
+      "color": "violet"
+    }
+  ],
+  "funnelSources": [
+    {
+      "label": "Trigger Source — M&A and PE Events",
+      "desc": "Every account enters the board because something dated and public happened to it: an acquisition close, a PE recap, a multi-location rollup. Shepherd Insurance acquiring Capitol Insurance Group and Cox & Kimball (Insurance Journal, 2026-05-28). Harrell-Fish acquiring Ecofriendly Mechanical (PR Newswire, 2026-04-08) with New State Capital behind it since December 2025. World Insurance closing Dunaway and Hoosier on 2026-06-01. These are not personas — they are dates on a calendar, and each one starts a window."
+    },
+    {
+      "label": "Owned Source — evereffect.com",
+      "desc": "The posting asks this hire to be \"strategic leader for evereffect.com performance.\" That makes the site a lead source I own, not a brochure someone else maintains. Today it publishes nothing, captures nothing, and proves nothing with numbers — the three findings on the Site Audit tab. Fixing that is not a marketing favor; it is the second half of my own pipeline."
+    }
+  ],
+  "qualificationGate": {
+    "label": "Fragmentation Gate — three of five, or it isn't pipeline",
+    "items": [
+      {
+        "letter": "1",
+        "text": " — Two or more Google Business Profiles still live for the same operating brand."
+      },
+      {
+        "letter": "2",
+        "text": " — Two live websites, or one site with the acquired brand orphaned and unlinked."
+      },
+      {
+        "letter": "3",
+        "text": " — Local pack rankings split across the legacy names in the same metro."
+      },
+      {
+        "letter": "4",
+        "text": " — Review history stranded on the profile that is being retired."
+      },
+      {
+        "letter": "5",
+        "text": " — A named post-merger decision maker — marketing owner or principal — publicly identifiable."
+      }
+    ],
+    "hardRule": "Fewer than three of five and the account goes to the watch list, not the forecast. The merger is the trigger; the fragmentation is the qualifier. I check it live before I write the email, which is why the first line of the email is something they can verify."
+  },
+  "aeAcceptance": {
+    "label": "Deal Quality Bar — self-scored before any proposal leaves",
+    "items": [
+      {
+        "range": "Score 4–5",
+        "text": "Fragmentation confirmed live, revenue impact named by the buyer in their words, decision maker on the call, timeline inside 90 days → proposal goes out."
+      },
+      {
+        "range": "Score 3",
+        "text": "Real fit but no timeline or the principal was not on the call → back to discovery, no proposal yet."
+      },
+      {
+        "range": "Score 1–2",
+        "text": "Wrong buyer, no felt pain, shopping on price → I didn't qualify. It comes off the forecast the same week, not at month end."
+      }
+    ],
+    "target": "Target: 70%+ of proposals scored 4–5. A proposal sent below that bar costs delivery time the agency does not get back."
+  },
+  "contentWedges": [
+    {
+      "head": "Cold Email — Post-Merger GBP Consolidation",
+      "color": "amber",
+      "subject": "Two profiles, one Shepherd",
+      "observation": "Saw the Capitol Insurance Group and Cox & Kimball close on May 28 — Insurance Journal ran it.",
+      "valueLink": "Capitol's profile still carries a separate review history from 1981, and both names are still ranking in the same Indianapolis local pack. Consolidated wrong, that review equity is gone permanently — Google does not restore it.",
+      "ask": "If it is useful I will send the side-by-side of what both profiles are currently ranking for. No call needed to read it.",
+      "qualifies": "Qualifies on: dated acquisition, two live GBPs, retained review history at risk, church and non-profit specialty which is an EverEffect vertical. If they reply that the profiles were already merged, the trigger is spent — move to watch list."
+    },
+    {
+      "head": "Cold Email — Home Services PE Rollup",
+      "color": "blue",
+      "subject": "Ecofriendly's traffic after April",
+      "observation": "Harrell-Fish picked up Ecofriendly Mechanical on April 8, with New State Capital behind you since December.",
+      "valueLink": "PE-backed rollups usually add locations faster than they add local search coverage. The acquired brand's site keeps ranking for the service terms while the parent brand gets none of the credit.",
+      "ask": "Worth fifteen minutes on which of the two brands should own the service pages before you add the next location.",
+      "qualifies": "Qualifies on: dated acquisition, PE sponsor with a rollup thesis, home services and HVAC is a stated EverEffect vertical, CEO Andy Hardisty is the only publicly named exec so the decision maker is identifiable. If they say the sites are already consolidated, no pain — watch list."
+    },
+    {
+      "head": "LinkedIn — Multi-Brand Review Equity",
+      "color": "green",
+      "subject": null,
+      "observation": "Congratulations on closing Dunaway and Hoosier on June 1 — two towns in one quarter is a real integration lift.",
+      "valueLink": "The part that usually gets missed: New Palestine and Bloomfield both have their own local packs, and the acquired names still own them. Rebranding the signage is faster than rebranding the search results.",
+      "ask": "Happy to send over what each location currently ranks for if that is useful to whoever is handling the integration.",
+      "qualifies": "Qualifies on: dated multi-location acquisition, distinct local markets, integration in progress. If nobody owns marketing yet, that is the opening — not a disqualifier."
+    },
+    {
+      "head": "Owned Channel — evereffect.com as a Lead Source",
+      "color": "pink",
+      "subject": null,
+      "observation": "Not outreach. This is the internal wedge the posting explicitly asks this seat to own.",
+      "valueLink": "Three fixable gaps found live on 2026-07-20: the newest blog post is from May 29, 2025; there is no gated asset anywhere on the site, so there is no email capture and no list; and there is not one published case study carrying a number, on a site whose tagline is \"profits, not promises.\"",
+      "ask": "First thirty days: restart the publishing cadence, ship one gated asset tied to the merger-fragmentation thesis, and write the first numbers-bearing case study using an existing retained client.",
+      "qualifies": "This is the difference between a rep who hits quota and a rep who builds a second source of pipeline the agency keeps after he leaves. It is also the only bullet on the posting that most applicants will skip."
+    }
+  ],
+  "contentWhy": "Most agency prospecting is noise. \"We help businesses grow online\" gets deleted before the second line. Content that qualifies gets replied to, because it names a specific thing the buyer can go check themselves in thirty seconds.\n\nRule: every outreach piece answers the three questions the owner is silently asking. (1) Why are you emailing me specifically — because of a dated event, named. (2) Why now — because the window on a merger closes. (3) What's the ask — small, verifiable, and costing them nothing to accept.",
+  "auditFindings": {
+    "label": "evereffect.com — live audit, 2026-07-20",
+    "intro": "The posting asks this hire to be \"strategic leader for evereffect.com performance.\" So I audited it before the call rather than promising to audit it after. Three gaps, three things already working. Every item was checked live on 2026-07-20 and is verifiable in a browser during the interview.",
+    "gaps": [
+      {
+        "title": "Publishing stopped 14 months ago",
+        "detail": "The newest blog post is dated May 29, 2025. For an agency selling content marketing and AI SEO, the site is the work sample — and right now it argues the opposite case.",
+        "fix": "Restart cadence in the first 30 days. Two posts a month, both built off real client outcomes rather than topic-generator filler."
+      },
+      {
+        "title": "No gated asset anywhere on the site",
+        "detail": "There is no lead magnet, so there is no email capture, so there is no list. The posting asks this seat to run high-volume email — into a list that does not exist yet.",
+        "fix": "Ship one gated asset tied to the merger-fragmentation thesis: a post-acquisition local search checklist. It doubles as the outreach attachment."
+      },
+      {
+        "title": "Zero case studies carrying a number",
+        "detail": "Every testimonial on the site is qualitative. The tagline is \"ROI-Driven Digital Marketing, Delivering Profits, Not Promises\" — and there is not one published figure backing it.",
+        "fix": "One numbers-bearing case study in the first 60 days, using an already-retained client. Classic Auto Insurance is a 15-plus year relationship; that story is sitting there unwritten."
+      }
+    ],
+    "working": [
+      {
+        "title": "Free Digital Performance Analysis CTA",
+        "detail": "A real, low-friction offer already live on the site. It is the right shape — it just has nothing feeding it."
+      },
+      {
+        "title": "Trust signals are in place",
+        "detail": "2025 Premier Google Partner (top 3% of agencies, awarded on retention and performance rather than ad spend), Google Guaranteed and Screened, plus Clutch and UpCity badges."
+      },
+      {
+        "title": "Three offices and a live phone number in the header",
+        "detail": "317.967.6779 in the header, three office locations. The local proof is credible — it just isn't converting traffic that never arrives."
+      }
+    ]
+  },
+  "phases": [
+    {
+      "num": "Days 1–30",
+      "color": "blue",
+      "sub": "Learn · Build the Board · Fix What's Mine",
+      "items": [
+        "Learn the delivery side first — sit in on active Local SEO, GBP and web-design engagements so I can price and scope without guessing",
+        "Get fluent in Basecamp and the existing account handoff, and read the last twelve months of proposals that closed and that didn't",
+        "Build the 60-account Indiana trigger board — every entry with a dated, public source, starting from the seven already mapped",
+        "Stand up the trigger monitor: Insurance Journal, PR Newswire, Indiana Secretary of State filings, PE announcement feeds",
+        "Write and test the merger-fragmentation diagnostic so it runs in ten minutes and attaches to the first email",
+        "Deliver the evereffect.com fix plan in week one and restart the publishing cadence"
+      ]
+    },
+    {
+      "num": "Days 30–60",
+      "color": "amber",
+      "sub": "Execute · Qualify · First Close",
+      "items": [
+        "Full-volume outreach across the board: email, LinkedIn and phone, targeting 8–10 discovery calls held per month",
+        "Fragmentation Gate live on every account — three of five or it does not enter the forecast",
+        "First proposals out, priced against recovered lead volume rather than deliverable count",
+        "First closed engagement — target by day 60",
+        "Ship the gated asset and capture the first list, so outreach and the site start feeding each other",
+        "Weekly written recap to Chris and Thomas: what moved, what stalled, what I'm changing"
+      ]
+    },
+    {
+      "num": "Days 60–90",
+      "color": "green",
+      "sub": "Forecast · Document · Widen",
+      "items": [
+        "Monthly quota attainment, with the month called by week two rather than discovered at month end",
+        "Trigger playbook documented end to end so it survives me being out and can be handed to a second seat",
+        "First numbers-bearing case study published — the tagline finally has a figure behind it",
+        "Widen the thesis from insurance into home services and HVAC, where the same rollup pattern is running",
+        "Conversion rates tracked per stage, with the weakest stage named and being worked, not averaged away",
+        "A business case for the next hire, based on what one seat actually produced rather than what a plan projected"
+      ]
+    }
+  ],
+  "phaseProof": "By day 90 EverEffect should have a BDM function that (a) works a live trigger board instead of a static list, (b) can call the month by week two, (c) has one repeatable playbook written down, and (d) has evereffect.com producing inbound it did not produce before I got here. If I miss any of those, I will tell you which one and what I changed — before you have to ask. That is the accountability I ran at Magic, and it is what I would bring here.",
+  "closingPoints": [
+    "I am not a SaaS rep applying to an agency. I run one. DCF sells digital services to SMBs today, and EverEffect's marquee vertical — legal — is already my book. I know what it costs to deliver what I would be selling, which is why I will not sell a scope the team cannot ship.",
+    "The territory thesis is built, not described. Seven named Indiana accounts, every one carrying a dated public trigger, and one deliberately disqualified — the BigLaw names with in-house marketing and procurement. Naming what I would not chase is the part of the answer most candidates skip.",
+    "The 5 F's is my operating rhythm. Monday morning, twenty minutes, same five questions. On a monthly quota you cannot afford to learn in week four that the month was lost in week one. This is how I stop that from happening.",
+    "I audited evereffect.com before the call. Three fixable gaps, all live-verifiable while we are on this call: publishing stopped in May 2025, there is no gated asset and therefore no list, and there is no case study with a number on a site that promises profits not promises. The posting asks this seat to own that. I would own it starting week one.",
+    "By day 90 you should have a trigger board, a documented playbook, a first close, and a site that generates leads. If I hit that, the next conversation is about a second seat. If I miss, you will hear it from me first."
+  ],
+  "openQuestions": [
+    {
+      "q": "Is the 20% on new business a one-time first-year payout, or a residual on the recurring retainer?",
+      "why": "Decisive at an agency with 15-year client relationships. On a residual, the compounding book is the compensation story. On a one-time, the math changes what an ideal deal looks like — and I would rather know which behavior you are paying for before I start optimizing for it."
+    },
+    {
+      "q": "What does the monthly quota number actually look like, and is it measured on closed revenue or signed contract value?",
+      "why": "A monthly cadence with a long agency sales cycle only works if the measure matches the cycle. I want to know which one I am forecasting against."
+    },
+    {
+      "q": "Who owns evereffect.com today, and what would \"strategic leader for evereffect.com performance\" mean in practice — recommending, or shipping?",
+      "why": "It is the most unusual line in the posting and the one I am most interested in. I have three fixes ready; I want to know whether this seat can actually execute them or has to route them."
+    },
+    {
+      "q": "Collin — I could not find a public profile, so I would rather ask than assume. What is your role on the team?",
+      "why": "He is on the agenda and there is no public information about him anywhere — not the site, not the LinkedIn company page, not any org listing. Asking directly is better than guessing wrong in the room."
+    },
+    {
+      "q": "When a merger lands in a client's market, who at EverEffect sees it first today?",
+      "why": "It tells me whether the trigger motion I am proposing is net-new or duplicating something delivery already does informally."
+    }
+  ],
+  "activityLog": [
+    {
+      "date": "2026-07-21",
+      "action": "build",
+      "label": "Plan of Action built and added to the hub",
+      "detail": "EverEffect Plan of Action authored from live-verified intel only: panel research, LinkedIn posting 4440047911, the 2026-07-20 evereffect.com audit, and the seven-account Indiana trigger board. Added to the DCF Plan of Action Hub alongside FusionAuth.",
+      "icon": "dashboard"
+    },
+    {
+      "date": "2026-07-20",
+      "action": "build",
+      "label": "ProspectEngine — EverEffect pipeline + Pipeline From Zero",
+      "detail": "EverEffect added to the Pipeline Hub as a third company with a new \"Pipeline From Zero\" section: seven publicly sourced, dated Indiana accounts plus one deliberate disqualification. Verified with a 60-check harness, zero failures, existing companies untouched.",
+      "icon": "build"
+    },
+    {
+      "date": "2026-07-20",
+      "action": "message",
+      "label": "Interview confirmed — inbound from Chris Bross",
+      "detail": "Chris Bross, Partner & COO, emailed directly one week after the LinkedIn application. Accepted the same day. Panel set for Thursday 2026-07-23, 12:00–1:00 PM EDT on Google Meet with Chris Bross, Thomas Heed and Collin.",
+      "icon": "message"
+    }
+  ]
+}

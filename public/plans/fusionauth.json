@@ -1,0 +1,311 @@
+{
+  "plan": {
+    "title": "FusionAuth Plan of Action",
+    "subtitle": "Operating System + Funnel Architecture",
+    "audience": "For Ben · Second Round · Senior BDR Lead",
+    "author": "Evans Diaz · DCF",
+    "date": "July 2026",
+    "version": "v2.0",
+    "status": "ready",
+    "statusLabel": "Interview Artifact",
+    "repoUrl": "https://github.com/diazconsultingfirm/fusionauth-plan",
+    "dashboardUrl": "https://diazconsultingfirm.github.io/fusionauth-plan/",
+    "id": "fusionauth",
+    "company": "FusionAuth",
+    "role": "Senior SDR / BDR Lead",
+    "mark": "FA",
+    "accent": "#F58220",
+    "interviewDate": "2026-07-28",
+    "interviewLabel": "Tue Jul 28, 2026 · HR screen (Hayley)",
+    "stage": "Scheduled",
+    "tabs": [
+      "rhythm",
+      "funnel",
+      "content",
+      "milestones",
+      "pitch"
+    ],
+    "links": [
+      {
+        "label": "FusionAuth plan dashboard (v2, single-company)",
+        "url": "https://diazconsultingfirm.github.io/fusionauth-plan/"
+      },
+      {
+        "label": "Diaz Consulting Firm",
+        "url": "https://diazconsultingfirm.github.io/"
+      }
+    ]
+  },
+  "metrics": [
+    {
+      "val": "50-70",
+      "lbl": "Qualified meetings/mo"
+    },
+    {
+      "val": "70%",
+      "lbl": "AE acceptance target"
+    },
+    {
+      "val": "$45-60K",
+      "lbl": "Pipeline sourced/mo"
+    },
+    {
+      "val": "$800K-1M",
+      "lbl": "Annualized (3 BDRs)"
+    }
+  ],
+  "fiveFs": [
+    {
+      "letter": "F",
+      "name": "Focus",
+      "color": "gold",
+      "desc": "Are we spending time on the right opportunities with the right people? This is the ICP gate â€” firmographics, demographics, tech stack signals, funding triggers. If a prospect doesn't match the Focus criteria, we don't prospect them.",
+      "action": "FusionAuth ICP: 25â€“200 engineers, engineering-led org, Auth0/Cognito/Keycloak in stack, recent funding or platform hiring. Say no to: marketing-led orgs, non-technical buyers, companies under 10 engineers."
+    },
+    {
+      "letter": "F",
+      "name": "Field",
+      "color": "blue",
+      "desc": "Do we have the right team with the right tools and resources? Field is your people + your stack. Right people in right seats, equipped with the tools that make them dangerous.",
+      "action": "FusionAuth setup: 2 BDRs in Bellevue with CRO/RSM. HubSpot CRM + Glyphic call intelligence + Apollo for enrichment + LinkedIn Sales Nav for dev-buyer targeting. Third BDR at month 5-6."
+    },
+    {
+      "letter": "F",
+      "name": "Fundamentals",
+      "color": "green",
+      "desc": "Are we doing the right things right, consistently? Discovery, qualification, positioning, prospecting skills, messaging. This is the playbook â€” and it has to be tight.",
+      "action": "FusionAuth fundamentals: SPICED discovery on every call. Four-wedge messaging (Auth0 cost, Cognito compliance, SAML trigger, G2 momentum). Qualification gate that kills bad pipeline before it hits the AE."
+    },
+    {
+      "letter": "F",
+      "name": "Forecast",
+      "color": "purple",
+      "desc": "Can we predict the future? Measure the KPIs that tell you what's coming. Pipeline coverage, stage conversion rates, AE acceptance rate. See the holes before they form.",
+      "action": "FusionAuth KPIs: Meetings booked â†’ meetings held â†’ AE accepted â†’ pipeline created â†’ closed-won. Track each conversion rate. If AE acceptance drops below 70%, fix qualification before adding volume."
+    },
+    {
+      "letter": "F",
+      "name": "Fun",
+      "color": "pink",
+      "desc": "Do people want to show up, do their best, stay, and advocate? Culture isn't ping-pong tables. It's wins celebrated, losses coached without blame, and reps who know their work matters.",
+      "action": "FusionAuth culture: Two BDRs building something from zero â€” that's inherently high-agency. Weekly win shares, AE shoutouts for quality handoffs, public pipeline leaderboard. The first BDR team sets the tone for every hire that follows."
+    }
+  ],
+  "rhythmStory": "Every Monday 1-on-1 with each BDR runs through the 5 F's in order. Focus: what accounts are you working this week? Field: do you have everything you need? Fundamentals: what skill are you working on? Forecast: pipeline coverage check. Fun: one win from last week. 20 minutes, same structure every time. It's the cadence I used at Magic to take 2 below-quota reps to consistent attainment within a quarter. It works because it's predictable â€” reps know exactly what's coming and what's expected.",
+  "funnelStory": "FusionAuth's funnel is unique: 20M+ downloads, freemium PLG engine, thousands of free-tier users. The BDR job isn't to cold-call from a blank list â€” it's to identify the 2-5% of free users who are expansion-ready AND build outbound into net-new accounts that haven't heard of FusionAuth yet. Two sources, one qualification standard.",
+  "funnelStages": [
+    {
+      "bar": "PLG Signups + Outbound Targets",
+      "width": 100,
+      "num": "500-800/mo",
+      "math": "(PLG: 300-500 signups · Outbound: 200-300 accounts researched)",
+      "color": "gold"
+    },
+    {
+      "bar": "Qualification Gate",
+      "width": 40,
+      "num": "200-300/mo",
+      "math": "(~40-50% pass rate)",
+      "color": "amber",
+      "gate": true
+    },
+    {
+      "bar": "Qualified Meetings",
+      "width": 20,
+      "num": "50-70/mo",
+      "math": "(2 BDRs Ã— 25-35 each)",
+      "color": "blue"
+    },
+    {
+      "bar": "AE Accepted â†’ Pipeline",
+      "width": 14,
+      "num": "35-45/mo",
+      "math": "(70% acceptance target)",
+      "color": "green",
+      "gate": true
+    },
+    {
+      "bar": "Closed Won",
+      "width": 8,
+      "num": "6-8/mo · $45-60K",
+      "math": "(AE close rate 20-25% · avg $7.5K ACV)",
+      "color": "violet"
+    }
+  ],
+  "funnelSources": [
+    {
+      "label": "PLG Inbound Source",
+      "desc": "Free-tier signups from developer community, DockerHub, AWS Marketplace. FusionAuth's freemium is genuinely free â€” no credit card, full features. ~2-5% of these will ever convert to paid. BDR job: find the ones showing expansion signals (team size, API volume, feature usage, support tickets) and reach out within 2 hours of trigger."
+    },
+    {
+      "label": "Outbound Source",
+      "desc": "Target accounts built from public engineering blogs, recent platform hires on LinkedIn, tech stack job postings (Auth0/Cognito/Keycloak mentions), funding announcements. Every target has a documented competitive signal â€” Auth0 pricing pain, Cognito compliance gap, Keycloak ops burden."
+    }
+  ],
+  "qualificationGate": {
+    "label": "SPICED Gate â€” must pass all 6",
+    "items": [
+      {
+        "letter": "S",
+        "text": "ituation: Auth0/Cognito/Keycloak/homegrown in stack? Check."
+      },
+      {
+        "letter": "P",
+        "text": "ain: Cost pressure? Compliance gap? Ops burden? Documented."
+      },
+      {
+        "letter": "I",
+        "text": "mpact: What happens if they don't fix it? Stated."
+      },
+      {
+        "letter": "C",
+        "text": "onsequence: Who feels it â€” CTO? VP Eng? Compliance officer? Identified."
+      },
+      {
+        "letter": "E",
+        "text": "xpected outcome: What does fixed look like? Articulated."
+      },
+      {
+        "letter": "D",
+        "text": "ifferentiator: Why FusionAuth vs status quo? Clear."
+      }
+    ],
+    "hardRule": "If any letter is blank, the lead doesn't advance. No staging 'maybe later' as pipeline."
+  },
+  "aeAcceptance": {
+    "label": "AE Acceptance Criteria (Ben's AEs score every lead 1-5)",
+    "items": [
+      {
+        "range": "Score 4-5",
+        "text": "ICP fit confirmed, SPICED complete, economic buyer identified, timeline within 90 days â†’ AE pursues."
+      },
+      {
+        "range": "Score 3",
+        "text": "Good fit but missing timeline or economic buyer â†’ BDR re-qualifies."
+      },
+      {
+        "range": "Score 1-2",
+        "text": "Wrong buyer, no pain, no urgency â†’ BDR didn't qualify. Coaching moment."
+      }
+    ],
+    "target": "Target: 70%+ score 4-5. If below 70%, fix qualification, not volume."
+  },
+  "contentWedges": [
+    {
+      "head": "Cold Email â€” Auth0 Cost Wedge",
+      "color": "amber",
+      "subject": "Auth0 at [MAU] scale?",
+      "observation": "[Name], saw [Company] just hired two platform engineers and your job postings mention OAuth/OIDC.",
+      "valueLink": "At your scale, the Auth0 math gets interesting. One company at 350K MAU documented $200K/yr in savings.",
+      "ask": "15-min call to compare economics? If this isn't the year for it, no sweat.",
+      "qualifies": "Qualifies on: current stack (Auth0/OIDC), scale signal (hiring), cost pain (universal at 25K+ MAU). If they reply with 'we're happy with Auth0' â†’ they're not in pain â†’ don't chase."
+    },
+    {
+      "head": "Cold Email â€” Cognito Compliance Wedge",
+      "color": "blue",
+      "subject": "Cognito + SOC 2 = conversation",
+      "observation": "[Name], congrats on the SOC 2 cert â€” saw the announcement on your blog.",
+      "valueLink": "Did your auditor ask about your auth provider's data residency? Cognito's shared SaaS model gets tricky for regulated buyers. FusionAuth: single-tenant, your VPC, full BAA.",
+      "ask": "Worth a conversation on dedicated-per-tenant vs shared SaaS?",
+      "qualifies": "Qualifies on: compliance milestone (SOC 2/HIPAA), current stack (Cognito), data residency requirement. If they say 'auditor was fine with Cognito' â†’ no pain â†’ move on."
+    },
+    {
+      "head": "LinkedIn â€” SAML Trigger",
+      "color": "green",
+      "subject": null,
+      "observation": "Liked your post about landing the first enterprise customer â€” that's a milestone.",
+      "valueLink": "Quick question: did they ask for SAML yet? Because if they did, Auth0 charges $34K+ for that feature tier. FusionAuth includes SAML/SSO/SCIM at no extra cost.",
+      "ask": "Happy to share how other dev-tool companies handled the enterprise auth jump if useful.",
+      "qualifies": "Qualifies on: enterprise deal trigger (SAML/SSO required), current stack (Auth0), pricing shock. If they haven't hit enterprise yet â†’ note it as watch list, revisit in 6 months."
+    },
+    {
+      "head": "Inbound PLG â€” Fast Follow-Up",
+      "color": "pink",
+      "subject": null,
+      "observation": "Trigger: Free-tier signup from a company with 25+ engineers (detected via Clearbit/Apollo enrichment on email domain).",
+      "valueLink": "[Name], saw you just signed up for FusionAuth â€” welcome. Quick context: most teams your size hit the Auth0 cost wall or Cognito compliance wall. You're on the right side of that.",
+      "ask": "Curious: are you evaluating CIAM for a specific project, or just exploring? Either way, happy to point you at the docs that match your use case.",
+      "qualifies": "Qualifies on: company size (25+ engineers), intent signal (active signup), timing (within 2 hours of trigger). If they're a solo dev or hobby project â†’ don't push, just welcome them."
+    }
+  ],
+  "contentWhy": "Most BDR sequences are noise. 'Our platform helps you...' gets deleted. Content that qualifies gets replied to â€” because it proves you did your homework and names a specific pain the buyer recognizes.\n\nRule: every outreach piece must answer three questions the buyer is silently asking: (1) Why are you emailing me specifically? (2) Why now? (3) What's the ask?",
+  "phases": [
+    {
+      "num": "Days 1â€“30",
+      "color": "blue",
+      "sub": "Learn · Build · Set Up",
+      "items": [
+        "Local install FusionAuth + build test app â€” know every feature a prospect might ask about",
+        "Map 10 competitors + every case study â€” Bilt, WeRoad, Promptfoo, Powerful Medical, dealcloser",
+        "Build 100-account target list vetted by competitive signal â€” each account has a documented reason why FusionAuth is relevant this quarter",
+        "Set up tool stack: HubSpot sequences, Apollo/Zoominfo enrichment, LinkedIn Sales Nav saved searches, Glyphic for call intelligence",
+        "Write 4 cold email templates + 4 LinkedIn templates + voicemail script â€” each leads with specific observation",
+        "Establish PLG inbound workflow: enrichment â†’ qualify â†’ follow up within 2 hours"
+      ]
+    },
+    {
+      "num": "Days 30â€“60",
+      "color": "amber",
+      "sub": "Execute · Qualify · Onboard",
+      "items": [
+        "Full-volume sequenced outreach: email + LinkedIn + phone across 100 accounts, 25-35 qualified meetings/month target",
+        "SPICED gate live on every meeting â€” no pain documented, deal doesn't advance",
+        "AE handoff review weekly â€” track acceptance rate, fix qualification if below 70%",
+        "Onboard BDR #2 with COACH framework: Connect week 1 â†’ Observe week 2 â†’ Ask â†’ Collaborate â†’ Hold accountable",
+        "Pipeline coverage reaching 3:1 (meetings to AE-accepted opps)",
+        "First sourced deal enters AE pipeline â€” the engine produces"
+      ]
+    },
+    {
+      "num": "Days 60â€“90",
+      "color": "green",
+      "sub": "Forecast · Scale · Prove",
+      "items": [
+        "5 F's weekly operating rhythm fully established â€” every Monday, same structure",
+        "Forecast accuracy within Â±10% â€” pipeline coverage, stage conversion rates, AE acceptance all tracked",
+        "BDR #2 independently running outreach at 25+ qualified meetings/month",
+        "Sequences A/B tested and optimized â€” reply rate and meeting conversion tracked per template",
+        "Pipeline coverage ratio sustained at 3:1+ â€” enough to project next quarter with confidence",
+        "Third BDR hire business case ready: team producing $45-60K/month sourced pipeline, 3rd rep adds $20-30K/month at marginal cost of $80K OTE"
+      ]
+    }
+  ],
+  "phaseProof": "By day 90, FusionAuth should have a BDR function that (a) produces 50-70 qualified meetings/month, (b) has AE acceptance above 70%, (c) can forecast sourced pipeline within Â±10%, and (d) is ready to scale to a third rep. That's not ambition â€” that's a measurable outcome. If I miss any of these by day 90, I'll tell you why and what I'm fixing. That's the level of accountability I ran at Magic, and it's what I'd bring here.",
+  "closingPoints": [
+    "I'm not asking for a job. I'm proposing a build. FusionAuth has the product devs actually want, the competitive wedge that closes, and the growth trajectory that justifies a BDR function. What's missing is the operating system that turns those inputs into predictable pipeline.",
+    "The 5 F's is my operating rhythm. Every Monday, same structure: Focus â†’ Field â†’ Fundamentals â†’ Forecast â†’ Fun. Reps know what's coming, what's expected, and how they're doing. I ran this at Magic with 6-8 reps. It works with two. It scales with ten.",
+    "The funnel has two sources and one standard. PLG inbound + outbound targets â†’ SPICED gate â†’ qualified meeting â†’ AE accepted â†’ closed won. No lead advances without pain, impact, and economic buyer. AE acceptance at 70%+ means the handoff is real.",
+    "Content that qualifies wins. Every outreach leads with a specific observation the buyer can verify. Auth0 cost at their scale. Cognito compliance gap on their cert. SAML trigger on their first enterprise deal. They know within one sentence whether this email is for them.",
+    "By day 90, I'll prove it. 50-70 qualified meetings, 70% AE acceptance, Â±10% forecast accuracy. If I miss, I'll tell you why. If I hit, we hire the third BDR. This is the same build I did at Magic â€” except here the product is better and the wedge is sharper."
+  ],
+  "activityLog": [
+    {
+      "date": "2026-07-11",
+      "action": "build",
+      "label": "v2.0 â€” Interactive dashboard deployed",
+      "detail": "FusionAuth Plan of Action upgraded from static HTML to interactive React + Three.js dashboard. Five tabs: Rhythm, Funnel, Content, Milestones, Pitch. Live at localhost:8041.",
+      "icon": "dashboard"
+    },
+    {
+      "date": "2026-07-10",
+      "action": "build",
+      "label": "v1.0 â€” Static POA delivered",
+      "detail": "Original FusionAuth Plan of Action as standalone HTML document with 5 F's, funnel architecture, content wedges, 30/60/90 milestones, and closing pitch. Dark DCF theme, print-ready.",
+      "icon": "build"
+    }
+  ],
+  "openQuestions": [
+    {
+      "q": "The posting names Claude explicitly alongside Clay and Wiza for scaling outbound. How far has that already gone internally?",
+      "why": "FusionAuth named the tool in its own job description, which is unusual. It tells me the AI-augmented research workflow I would bring is wanted, not tolerated — I want to know whether I would be starting that or extending it."
+    },
+    {
+      "q": "Is this seat a player-coach from day one, or an individual contributor until the second BDR hire lands?",
+      "why": "The scope described — define ICPs, build messaging, document playbooks, eventually coach hires — reads as both. The ramp plan is materially different depending on which comes first."
+    },
+    {
+      "q": "What share of pipeline today comes from PLG free-tier expansion versus true net-new outbound?",
+      "why": "The 20M+ download freemium base is the unusual asset here. The split determines whether the first 90 days is mostly a triage-and-trigger motion or mostly a cold-build motion."
+    }
+  ]
+}

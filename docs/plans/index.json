@@ -1,0 +1,67 @@
+{
+  "hub": {
+    "title": "Plan of Action Hub",
+    "brand": "DIAZ CONSULTING FIRM",
+    "subtitle": "Every live interview, one plan each, built before the call",
+    "owner": "Evans Diaz",
+    "updated": "2026-07-21"
+  },
+  "plans": [
+    {
+      "id": "evereffect",
+      "file": "evereffect.json",
+      "company": "EverEffect",
+      "role": "Business Development Manager",
+      "mark": "EE",
+      "accent": "#3BA55C",
+      "stage": "Panel Interview",
+      "status": "ready",
+      "interviewDate": "2026-07-23",
+      "interviewLabel": "Thu Jul 23, 2026 · 12:00–1:00 PM EDT · Google Meet",
+      "who": "Chris Bross (Partner/COO) · Thomas Heed (Co-Founder/President) · Collin (role TBC)",
+      "thesis": "Indiana's insurance and home-services M&A wave manufactures EverEffect's exact problem on a predictable clock — a merger fragments digital presence, and that is a Local SEO, GBP and web-design engagement arriving on a known date.",
+      "headline": [
+        {
+          "val": "7",
+          "lbl": "accounts mapped"
+        },
+        {
+          "val": "3",
+          "lbl": "site gaps found"
+        },
+        {
+          "val": "Monthly",
+          "lbl": "quota cadence"
+        }
+      ]
+    },
+    {
+      "id": "fusionauth",
+      "file": "fusionauth.json",
+      "company": "FusionAuth",
+      "role": "Senior SDR / BDR Lead",
+      "mark": "FA",
+      "accent": "#F58220",
+      "stage": "HR Screen",
+      "status": "ready",
+      "interviewDate": "2026-07-28",
+      "interviewLabel": "Tue Jul 28, 2026 · HR screen (Hayley)",
+      "who": "Hayley (HR) · introduction routed through a mutual contact",
+      "thesis": "FusionAuth has the product devs want and the competitive wedge that closes. What is missing is the operating system that turns 20M+ downloads and a freemium base into predictable, qualified pipeline.",
+      "headline": [
+        {
+          "val": "50-70",
+          "lbl": "qualified mtgs/mo"
+        },
+        {
+          "val": "70%",
+          "lbl": "AE acceptance"
+        },
+        {
+          "val": "$45-60K",
+          "lbl": "pipeline/mo"
+        }
+      ]
+    }
+  ]
+}
