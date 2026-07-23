@@ -54,8 +54,9 @@ export default function PlanView({ data, roster, onHome, onSwitch }) {
   const sections = isLocalHost ? allSections : allSections.filter((t) => t !== 'dashboards')
   const tabs = ['full', ...sections]
   const [activeTab, setActiveTab] = useState('full')
-  const days = daysUntil(data.plan.interviewDate)
-  const { num, lbl } = countdownLabel(days)
+  const isConsulting = data.plan.kind === 'consulting'
+  const days = isConsulting ? null : daysUntil(data.plan.interviewDate)
+  const { num, lbl } = isConsulting ? {} : countdownLabel(days)
   const ActiveTab = TAB_COMPONENTS[activeTab]
 
   return (
@@ -93,10 +94,17 @@ export default function PlanView({ data, roster, onHome, onSwitch }) {
         </div>
 
         <div className="topbar-right">
-          <span className="health-indicator">
-            <span className={`health-dot ${days < 0 ? 'dot-muted' : days <= 3 ? 'dot-yellow' : 'dot-green'}`} />
-            <span className="health-label">{num} {lbl}</span>
-          </span>
+          {isConsulting ? (
+            <span className="health-indicator">
+              <span className="health-dot dot-green" />
+              <span className="health-label">{data.plan.pitchDateLabel}</span>
+            </span>
+          ) : (
+            <span className="health-indicator">
+              <span className={`health-dot ${days < 0 ? 'dot-muted' : days <= 3 ? 'dot-yellow' : 'dot-green'}`} />
+              <span className="health-label">{num} {lbl}</span>
+            </span>
+          )}
           <span className="status-badge badge-gold">{data.plan.statusLabel}</span>
           <span className="topbar-version">{data.plan.version}</span>
         </div>

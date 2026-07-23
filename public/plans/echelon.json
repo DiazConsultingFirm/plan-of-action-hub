@@ -1,0 +1,488 @@
+{
+  "plan": {
+    "id": "echelon",
+    "kind": "consulting",
+    "company": "Echelon Legal",
+    "role": "Growth Audit & Web Platform Engagement",
+    "mark": "EL",
+    "accent": "#4C8BF5",
+    "title": "Echelon Legal — Growth Audit & Plan",
+    "subtitle": "Site Audit + Local Growth Engagement",
+    "audience": "For Alexander Karantzalis, Esq. · Echelon Legal, PLLC",
+    "author": "Evans Diaz · DCF",
+    "date": "July 2026",
+    "version": "v1.0",
+    "status": "ready",
+    "statusLabel": "Active Prospect",
+    "stage": "Active Prospect",
+    "pitchDate": "2026-07-19",
+    "pitchDateLabel": "Pitch delivered Jul 19, 2026 · Meeting held Jul 20",
+    "tabs": [
+      "rhythm",
+      "funnel",
+      "content",
+      "audit",
+      "milestones",
+      "pitch"
+    ],
+    "dataNote": "This is a real, open pitch — not a hired engagement yet. The audit findings and ranking data are live research from 2026-07-19. The Rhythm, Funnel, Content, and Milestones sections describe the engagement DCF is proposing to run if retained — labelled as the plan, not as results already delivered.",
+    "repoUrl": "",
+    "dashboardUrl": "",
+    "links": [
+      {
+        "label": "Echelon Legal, PLLC — the firm this plan is written for",
+        "url": "https://echelonlegalfl.com"
+      },
+      {
+        "label": "Diaz Consulting Firm",
+        "url": "https://diazconsultingfirm.github.io/"
+      }
+    ],
+    "contact": "Alexander Karantzalis, Esq. · 954-548-3558 · alexander@echelonlegalfl.com"
+  },
+  "metrics": [
+    {
+      "val": "12+",
+      "lbl": "Pages after rebuild"
+    },
+    {
+      "val": "1–3 wk",
+      "lbl": "Build timeline"
+    },
+    {
+      "val": "$3,000",
+      "lbl": "Recommended tier"
+    },
+    {
+      "val": "$500/mo",
+      "lbl": "Growth retainer"
+    }
+  ],
+  "fiveFs": [
+    {
+      "letter": "F",
+      "name": "Focus",
+      "color": "gold",
+      "desc": "Are we spending the week on the highest-leverage work for this specific firm? Local SEO for a solo estate-planning attorney is not generic content — it is Weston, Broward, and Miami-Dade pages built around his actual practice mix, nothing else.",
+      "action": "Echelon Legal setup: business, estate & trusts, real estate, and probate get their own pages before any general content work starts. Every page ties back to a practice area he actually bills, not a keyword list."
+    },
+    {
+      "letter": "F",
+      "name": "Field",
+      "color": "blue",
+      "desc": "Do we have the right team and stack? This is the same content and local-SEO engine DCF already runs for two other law-firm clients — proven, not improvised.",
+      "action": "Echelon Legal setup: the same playbook running for Robert Davis P.A. and Gerlach Legal — practice-area page templates, schema.org Attorney markup, Google Business Profile management, review-request automation."
+    },
+    {
+      "letter": "F",
+      "name": "Fundamentals",
+      "color": "green",
+      "desc": "Are we doing the rebuild in the order that actually pays? Platform first, then local visibility, then language coverage, then conversion, then compounding proof — skipping ahead wastes the early weeks.",
+      "action": "Echelon Legal fundamentals: rebuild the platform (Week 1) before chasing rankings (Week 2) before going bilingual (Week 2) before adding AI intake (Week 3). Reviews and measurement run ongoing underneath all of it."
+    },
+    {
+      "letter": "F",
+      "name": "Forecast",
+      "color": "purple",
+      "desc": "Can we predict whether this retainer renews? A live client dashboard tracking rankings, calls, and bookings means neither of us is guessing by month three.",
+      "action": "Echelon Legal KPIs: Weston/Broward/Miami-Dade ranking position, review count and rating, consult bookings via Calendly and AI intake, and a quarterly re-audit that re-runs this exact report to show movement."
+    },
+    {
+      "letter": "F",
+      "name": "Fun",
+      "color": "pink",
+      "desc": "Does the relationship hold? A one-attorney firm has no bandwidth to chase a vendor — the relationship works when the vendor over-communicates instead of waiting to be asked.",
+      "action": "Echelon Legal culture: a real person answering when he calls, a dashboard he can check without asking, and a build that ships on the stated timeline — Foundation delivers inside one week, not \"soon.\""
+    }
+  ],
+  "rhythmStory": "This is the same weekly discipline DCF runs for every retained client: Monday, twenty minutes, same five questions. Focus — which pages ship this week. Field — is the stack (content templates, schema, GBP tools) actually in place. Fundamentals — are we following the build order or skipping ahead. Forecast — what does the live dashboard show. Fun — is he getting real communication, not silence between invoices. For a solo attorney with no marketing staff of his own, that predictability is worth as much as any single tactic.",
+  "funnelStory": "Right now Echelon Legal's funnel has a hole at the very top: the audit found zero page-one Weston results for his practice areas, against five-plus competitors who do rank. The firm is invisible to anyone who doesn't already know his name — branded searches find him, practice-area searches don't. The proposed funnel below is what DCF would build to close that gap: local visibility first, then a conversion layer that turns the traffic those rankings produce into booked consults. These are the engagement's targets, not measurements of a campaign already running.",
+  "funnelStages": [
+    {
+      "bar": "Local Search Visibility Built",
+      "width": 100,
+      "num": "3 markets",
+      "math": "(Weston · Broward · Miami-Dade dedicated landing pages + GBP optimization)",
+      "color": "gold"
+    },
+    {
+      "bar": "Practice-Area Qualification",
+      "width": 55,
+      "num": "4 practice areas",
+      "math": "(business · estate & trusts · real estate · probate — target)",
+      "color": "amber",
+      "gate": true
+    },
+    {
+      "bar": "Site Visits from Ranked Pages",
+      "width": 32,
+      "num": "target",
+      "math": "(replaces near-zero current practice-area search visibility)",
+      "color": "blue"
+    },
+    {
+      "bar": "Consult Booked",
+      "width": 16,
+      "num": "target",
+      "math": "(Calendly + 24/7 AI intake — qualifies, routes, briefs before the call)",
+      "color": "green",
+      "gate": true
+    },
+    {
+      "bar": "Retained Client",
+      "width": 8,
+      "num": "target",
+      "math": "(review-request engine compounds the 4.6★ base after each closed matter)",
+      "color": "violet"
+    }
+  ],
+  "funnelSources": [
+    {
+      "label": "Local Search Source",
+      "desc": "Dedicated Weston, Broward, and Miami-Dade landing pages plus Google Business Profile optimization and directory cleanup (Justia, Yelp, Avvo). Every page-one competitor got there with dedicated, content-rich local pages — that is structure, not luck, and it is exactly what the current 3-page site does not have."
+    },
+    {
+      "label": "Bilingual Source",
+      "desc": "Broward and Miami-Dade are majority-bilingual markets. Direct competitor RHG Legal already advertises Spanish fluency; Echelon's site is English-only today. A full /es/ version opens a lane a solo-attorney competitor has not covered."
+    }
+  ],
+  "qualificationGate": {
+    "label": "Practice-Area Fit Gate — must match one of four",
+    "items": [
+      {
+        "letter": "B",
+        "text": "usiness law — formation, contracts, transactions."
+      },
+      {
+        "letter": "E",
+        "text": "state & trusts — wills, estate planning, probate administration."
+      },
+      {
+        "letter": "R",
+        "text": "eal estate — residential and commercial transactions."
+      },
+      {
+        "letter": "P",
+        "text": "robate — administration and litigation."
+      }
+    ],
+    "hardRule": "Content and landing pages are built practice-area by practice-area, in the order that reflects his actual caseload — not a generic law-firm template."
+  },
+  "aeAcceptance": {
+    "label": "Consult-Quality Bar (proposed — tracked once live)",
+    "items": [
+      {
+        "range": "Strong",
+        "text": "Local-intent search (city + practice area), practice area matches one of the four, booked via Calendly or AI intake with a clear ask."
+      },
+      {
+        "range": "Worth a call",
+        "text": "Branded search or referral with a general question — good fit, just needs the right practice-area page to land on."
+      },
+      {
+        "range": "Not a fit",
+        "text": "Outside the four practice areas or outside South Florida — AI intake routes these out rather than booking them."
+      }
+    ],
+    "target": "Target: rankings and bookings tracked on the live client dashboard from day one, so fit is measured, not assumed."
+  },
+  "contentWedges": [
+    {
+      "head": "Platform Rebuild — Week 1",
+      "color": "amber",
+      "subject": null,
+      "observation": "Today: three pages total — home, thank-you, and a privacy page that still carries a towing company's template text (\"Call for 24-hour roadside assistance\").",
+      "valueLink": "An 8–12 page premium rebuild: dedicated business, estate & trusts, real estate, and probate pages, an attorney bio page carrying FL Bar #124755, a review showcase for the 4.6★ rating, and every legal page fixed and schema-marked.",
+      "ask": "Ships inside one week under the Foundation tier — the deposit locks the build slot.",
+      "qualifies": "This is the item every other step depends on. Rankings, bilingual pages, and AI intake all need real pages to attach to — this is why it goes first."
+    },
+    {
+      "head": "Own Weston Searches — Week 2",
+      "color": "blue",
+      "subject": null,
+      "observation": "Today: Echelon Legal does not appear anywhere in Weston practice-area search results — only branded searches for the firm's own name find it.",
+      "valueLink": "Dedicated local landing pages for Weston, Broward, and Miami-Dade, a fully optimized Google Business Profile with per-service descriptions, and directory consistency cleanup across Justia, Yelp, and Avvo.",
+      "ask": "Directly closes the gap the audit's ranking snapshot shows — every page-one competitor has this structure and Echelon does not, yet.",
+      "qualifies": "This is the step that actually produces new-client search traffic. Everything downstream (bilingual reach, AI intake, reviews) only matters once this exists."
+    },
+    {
+      "head": "Speak Both Languages — Week 2",
+      "color": "green",
+      "subject": null,
+      "observation": "Broward and Miami-Dade are majority-bilingual markets, and the current site is English-only.",
+      "valueLink": "A full Spanish-language version of the site — not a machine-translated afterthought.",
+      "ask": "Closest competitor RHG Legal already advertises Spanish; near-zero other competitors cover it, which leaves a real lane open.",
+      "qualifies": "Half the addressable market in these counties, largely uncontested outside one competitor."
+    },
+    {
+      "head": "Convert Around the Clock — Week 3",
+      "color": "pink",
+      "subject": null,
+      "observation": "Estate-planning leads often search at night, after the workday — a phone-and-form-only site misses them.",
+      "valueLink": "An AI intake assistant that qualifies the visitor, routes them into the existing Calendly flow, and emails Echelon the brief before the call.",
+      "ask": "Keeps the existing Calendly booking flow intact — this adds a qualification layer in front of it, it doesn't replace it.",
+      "qualifies": "Converts the after-hours traffic the new ranking pages will start producing, instead of losing it overnight."
+    }
+  ],
+  "contentWhy": "This isn't outreach copy — it's the actual build order DCF is proposing, in the order that pays. Same playbook already running for two other law-firm clients (Robert Davis P.A., Gerlach Legal): fix the foundation, then own the neighborhood, then speak to the whole market, then convert what shows up, then compound the proof with reviews and a live dashboard. Nothing here is generic agency filler — every item traces back to a specific gap the July 19 audit found.",
+  "phases": [
+    {
+      "num": "Days 1–30",
+      "color": "blue",
+      "sub": "Rebuild · Rank · Speak Both Languages",
+      "items": [
+        "Ship the premium 8–12 page rebuild — practice-area pages, attorney bio with FL Bar #124755, review showcase, fixed privacy/legal pages, schema.org Attorney markup",
+        "Publish dedicated Weston, Broward, and Miami-Dade landing pages",
+        "Optimize Google Business Profile with per-service descriptions; clean up Justia/Yelp/Avvo consistency",
+        "Ship the full Spanish-language version",
+        "Preserve and verify the existing Calendly booking flow through the rebuild",
+        "Live client dashboard stood up — rankings, calls, and bookings visible from day one"
+      ]
+    },
+    {
+      "num": "Days 30–60",
+      "color": "amber",
+      "sub": "Convert · Compound",
+      "items": [
+        "AI intake assistant live — qualifies visitors, routes to Calendly, briefs Echelon before each call",
+        "Post-matter review-request engine running, growing the 4.6★ base",
+        "First re-check of Weston/Broward/Miami-Dade practice-area rankings against the July 19 baseline",
+        "Directory listings verified consistent across all sources",
+        "First full month of dashboard data reviewed together"
+      ]
+    },
+    {
+      "num": "Days 60–90",
+      "color": "green",
+      "sub": "Prove · Re-Audit",
+      "items": [
+        "Quarterly competitive re-audit — this same report, refreshed, run against RHG Legal and the rest of the page-one field",
+        "Ranking movement on the four practice-area pages measured against the zero-visibility baseline",
+        "Consult-booking volume from AI intake and Calendly reviewed against pre-engagement volume",
+        "Retainer renewal conversation grounded in the dashboard, not a guess",
+        "Content engine cadence (practice-area articles) established for the next quarter"
+      ]
+    }
+  ],
+  "phaseProof": "By day 90, Echelon Legal should have a 12+ page site live, measurable ranking movement on Weston/Broward/Miami-Dade practice-area pages from a zero-visibility baseline, a live Spanish version, a 24/7 intake system, and a quarterly re-audit proving the movement — not a promise, the plan already scoped in the July 19 audit. First mover matters here: the closest competitor's site hasn't been touched since 2024, and nobody else in this market has a modern, conversion-built platform yet.",
+  "closingPoints": [
+    "\"Echelon Legal is a 4.6-star firm with a 3-page website.\" That's the whole problem in one line — the reputation is already earned, the platform just isn't carrying it yet.",
+    "\"RHG wins on content but their design and booking are years behind.\" Nobody in this market has a premium, modern, conversion-built site. The first firm that does owns the impression — and with your rating and one-attorney agility, that can be you before Q4.",
+    "The plan runs in the order that pays: platform first, then Weston visibility, then bilingual reach, then round-the-clock conversion, then reviews and measurement running underneath all of it.",
+    "Three ways in, all three fix every critical item the audit found. Foundation at $1,500 rebuilds the platform in a week. Local Dominance at $3,000 — the recommended tier — adds the three-county visibility and bilingual layer. The Echelon System at $5,000 plus $500 a month adds AI intake, a content engine, and the quarterly re-audit that proves it's working.",
+    "Why now: your closest competitor's site hasn't been touched since 2024, and nobody in Weston has a modern platform yet. The deposit locks the build slot; Foundation delivers inside one week."
+  ],
+  "openQuestions": [
+    {
+      "q": "Which concept direction resonates — The Ascent (warm, light, trust-first) or Echelon Rising (dark, modern, confident)?",
+      "why": "Both concepts were built specifically around the firm's name and story rather than as generic templates. Locking a direction early keeps the one-week Foundation timeline realistic."
+    },
+    {
+      "q": "Which tier fits where the practice is headed — Foundation, Local Dominance, or The Echelon System?",
+      "why": "Foundation fixes the platform. Local Dominance adds the three-county visibility layer this audit's ranking data says is missing. The Echelon System adds the ongoing growth machine. The right tier depends on whether the goal is a fixed platform or a compounding one."
+    },
+    {
+      "q": "Is there existing content — case outcomes, client stories, background — worth building the new bio and practice-area pages around, rather than starting from a blank page?",
+      "why": "A rebuild goes faster and reads more credibly when it's built from real material he already has, not generic placeholder copy."
+    }
+  ],
+  "auditFindings": {
+    "label": "echelonlegalfl.com — live audit, 2026-07-19",
+    "intro": "We audited echelonlegalfl.com the way a prospective client — and Google — actually sees it, the same day this plan was prepared. Two critical issues, three high-priority gaps, one thing already working well.",
+    "sourceLine": "Source: live crawl of echelonlegalfl.com + Google-indexed pages, 2026-07-19.",
+    "headline": [
+      {
+        "val": "4.6★",
+        "lbl": "Google rating (client-earned)"
+      },
+      {
+        "val": "3",
+        "lbl": "Pages on current site"
+      },
+      {
+        "val": "0",
+        "lbl": "Weston practice-area searches ranked*"
+      },
+      {
+        "val": "5+",
+        "lbl": "Competitors on page 1"
+      }
+    ],
+    "findings": [
+      {
+        "severity": "critical",
+        "title": "Privacy page belongs to a towing company",
+        "detail": "The privacy policy still contains its template's original text: \"Call (978) 327-1339 for 24-hour roadside assistance.\" That is what Google displays when the privacy page appears in results.",
+        "fix": "Replace with a real, firm-specific privacy policy as part of the platform rebuild."
+      },
+      {
+        "severity": "critical",
+        "title": "Three pages. Total.",
+        "detail": "Home, thank-you, privacy. No practice-area pages, no attorney bio, no content. Google has almost nothing to rank, and clients researching \"who is this lawyer?\" find nothing to build trust on.",
+        "fix": "8–12 page rebuild: dedicated pages for business, estate & trusts, real estate, and probate, plus a real bio page."
+      },
+      {
+        "severity": "high",
+        "title": "The attorney's name isn't on the website",
+        "detail": "\"Alexander Karantzalis\" appears nowhere on the homepage — no bio, no photo, no Florida Bar credential (#124755, good standing). People hire lawyers, not logos.",
+        "fix": "Attorney bio page with name, photo, and Bar credential, built into the rebuild."
+      },
+      {
+        "severity": "high",
+        "title": "The 4.6★ reputation is invisible",
+        "detail": "Real reviews exist (\"AK is the consummate professional!\") — none appear on the site. Every ranked competitor showcases theirs.",
+        "fix": "Live review showcase with star schema markup, plus a review-request engine to keep it growing."
+      },
+      {
+        "severity": "high",
+        "title": "No Spanish version",
+        "detail": "Broward and Miami-Dade are majority-bilingual markets. Direct competitor RHG Legal advertises Spanish fluency prominently; this site is English-only.",
+        "fix": "Full /es/ version as part of the Local Dominance tier."
+      },
+      {
+        "severity": "working",
+        "title": "Good bones to build on",
+        "detail": "Calendly booking is wired, the phone call-to-action is clear, and the firm name itself is strong. Nothing here needs rescuing — it needs a real platform underneath it."
+      }
+    ],
+    "rankingTable": {
+      "label": "Who owns \"estate planning attorney Weston FL\"",
+      "note": "Live search snapshot, localized to Weston — this is what the next client searching for this practice area actually sees. Echelon Legal appears only when someone already knows the firm's name; branded searches for \"Echelon Legal\" do find it — this snapshot is for the practice-area search a stranger would run.",
+      "sourceLine": "Source: localized web search (Weston, FL), 2026-07-19 — snapshot, not a continuous rank tracker.",
+      "rows": [
+        {
+          "rank": "1",
+          "result": "Justia directory",
+          "why": "Directory authority — the firm's own profile there is unclaimed and unoptimized."
+        },
+        {
+          "rank": "2",
+          "result": "Rarick & Beskin",
+          "why": "Dedicated \"Weston Estate Planning Attorney\" landing page."
+        },
+        {
+          "rank": "3",
+          "result": "RHG Legal (Weston)",
+          "why": "Same practice mix, 6-section site, bilingual, testimonials shown."
+        },
+        {
+          "rank": "4",
+          "result": "SuperLawyers directory",
+          "why": "Directory authority."
+        },
+        {
+          "rank": "5",
+          "result": "Kelley Grant & Tanis",
+          "why": "Dedicated Weston practice page."
+        },
+        {
+          "rank": "7",
+          "result": "Jakob Legal",
+          "why": "\"25 years in Weston\" story plus a dedicated page."
+        },
+        {
+          "rank": "8",
+          "result": "Bucelo Diaz",
+          "why": "Weston page with a free-consultation CTA."
+        },
+        {
+          "rank": "—",
+          "result": "Echelon Legal",
+          "why": "Not present. Ranks for the firm's own name only.",
+          "isSubject": true
+        }
+      ]
+    },
+    "competitorTable": {
+      "label": "Head-to-head with the closest competitor",
+      "note": "RHG Legal sits one neighborhood away with the same practice mix. Here's the honest comparison, including where Echelon can leapfrog them.",
+      "columns": [
+        "Echelon Legal (today)",
+        "RHG Legal",
+        "Echelon (after rebuild)"
+      ],
+      "sourceLine": "Source: live crawls of both sites, 2026-07-19 — the \"after rebuild\" column is proposal scope, not current state.",
+      "rows": [
+        {
+          "attribute": "Pages / content depth",
+          "values": [
+            "3 pages",
+            "6 sections",
+            "12+ pages incl. local landing pages"
+          ]
+        },
+        {
+          "attribute": "Attorney bio & credentials",
+          "values": [
+            "None",
+            "3 attorney bios",
+            "Full bio + FL Bar #124755 + photo"
+          ]
+        },
+        {
+          "attribute": "Testimonials on site",
+          "values": [
+            "None (4.6★ hidden)",
+            "5 shown",
+            "Live review wall + schema stars"
+          ]
+        },
+        {
+          "attribute": "Spanish",
+          "values": [
+            "No",
+            "Yes",
+            "Full /es/ version"
+          ]
+        },
+        {
+          "attribute": "Online booking",
+          "values": [
+            "Calendly",
+            "Phone / form only",
+            "Calendly + AI intake (24/7)"
+          ]
+        },
+        {
+          "attribute": "Design impression",
+          "values": [
+            "Generic template",
+            "Dated (2024) standard",
+            "Premium, conversion-built"
+          ]
+        },
+        {
+          "attribute": "Weston SERP presence",
+          "values": [
+            "Absent",
+            "Page 1, #3",
+            "Built to compete for page 1"
+          ]
+        }
+      ]
+    }
+  },
+  "activityLog": [
+    {
+      "date": "2026-07-23",
+      "action": "build",
+      "label": "Added to the Plan of Action Hub",
+      "detail": "Echelon Legal added as a live consulting example alongside the interview plans — real audit findings, ranking data, and the proposed engagement, all traced back to the July 19 pitch package.",
+      "icon": "dashboard"
+    },
+    {
+      "date": "2026-07-20",
+      "action": "message",
+      "label": "Pitch meeting held",
+      "detail": "Meeting with Alexander Karantzalis, Esq. to walk through the audit and the three-tier offer.",
+      "icon": "message"
+    },
+    {
+      "date": "2026-07-19",
+      "action": "build",
+      "label": "Growth audit and pitch package built",
+      "detail": "Live site audit, Weston-area ranking snapshot, RHG Legal competitive comparison, two concept mockups (The Ascent, Echelon Rising), and the three-tier offer — all researched and built same-day.",
+      "icon": "build"
+    }
+  ]
+}

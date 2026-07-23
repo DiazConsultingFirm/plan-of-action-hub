@@ -3,7 +3,7 @@ import { daysUntil, countdownLabel, byInterviewDate } from './dates'
 
 export default function HubLanding({ roster, onOpen }) {
   const plans = [...roster.plans].sort(byInterviewDate)
-  const next = plans[0]
+  const next = plans.find((p) => p.kind !== 'consulting')
 
   return (
     <motion.div
@@ -36,9 +36,10 @@ export default function HubLanding({ roster, onOpen }) {
 }
 
 function PlanCard({ plan, index, onOpen }) {
-  const days = daysUntil(plan.interviewDate)
-  const { num, lbl } = countdownLabel(days)
-  const urgency = days < 0 ? 'past' : days <= 3 ? 'imminent' : ''
+  const isConsulting = plan.kind === 'consulting'
+  const days = isConsulting ? null : daysUntil(plan.interviewDate)
+  const { num, lbl } = isConsulting ? {} : countdownLabel(days)
+  const urgency = isConsulting ? '' : days < 0 ? 'past' : days <= 3 ? 'imminent' : ''
 
   return (
     <motion.button
@@ -57,13 +58,22 @@ function PlanCard({ plan, index, onOpen }) {
           <div className="plan-card-company">{plan.company}</div>
           <div className="plan-card-role">{plan.role}</div>
         </div>
-        <div className={`plan-countdown ${urgency}`}>
-          <div className="plan-countdown-num">{num}</div>
-          <div className="plan-countdown-lbl">{lbl}</div>
-        </div>
+        {isConsulting ? (
+          <div className="plan-countdown">
+            <div className="plan-countdown-num" style={{ fontSize: 15, color: 'var(--gold)' }}>
+              ● Open
+            </div>
+            <div className="plan-countdown-lbl">active pursuit</div>
+          </div>
+        ) : (
+          <div className={`plan-countdown ${urgency}`}>
+            <div className="plan-countdown-num">{num}</div>
+            <div className="plan-countdown-lbl">{lbl}</div>
+          </div>
+        )}
       </div>
 
-      <div className="plan-when">{plan.interviewLabel}</div>
+      <div className="plan-when">{isConsulting ? plan.pitchDateLabel : plan.interviewLabel}</div>
       <div className="plan-who">{plan.who}</div>
       <div className="plan-thesis">{plan.thesis}</div>
       {plan.comp && <div className="plan-who"><strong style={{ color: 'var(--text)' }}>Comp:</strong> {plan.comp}</div>}

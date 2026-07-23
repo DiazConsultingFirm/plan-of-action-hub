@@ -25,8 +25,20 @@ export function countdownLabel(days) {
   return { num: String(days), lbl: 'days away' }
 }
 
-/** Sort plans soonest-first, with already-held interviews pushed to the end. */
+/**
+ * Sort plans soonest-first. Interview-kind plans (a real date on the calendar)
+ * always sort ahead of consulting-kind plans (an open pursuit, no fixed date —
+ * see PlanView's isConsulting), since those have no "days away" urgency to
+ * rank by. Among interview plans: soonest first, already-held pushed to the
+ * end. Among consulting plans: most recently touched first.
+ */
 export function byInterviewDate(a, b) {
+  const aConsulting = a.kind === 'consulting'
+  const bConsulting = b.kind === 'consulting'
+  if (aConsulting !== bConsulting) return aConsulting ? 1 : -1
+  if (aConsulting && bConsulting) {
+    return (b.pitchDate || '').localeCompare(a.pitchDate || '')
+  }
   const da = daysUntil(a.interviewDate)
   const db = daysUntil(b.interviewDate)
   const rank = (d) => (d < 0 ? 1 : 0)

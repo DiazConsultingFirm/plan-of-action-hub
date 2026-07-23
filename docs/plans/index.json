@@ -62,6 +62,34 @@
           "lbl": "pipeline/mo"
         }
       ]
+    },
+    {
+      "id": "echelon",
+      "file": "echelon.json",
+      "company": "Echelon Legal",
+      "role": "Growth Audit & Web Platform Engagement",
+      "mark": "EL",
+      "accent": "#4C8BF5",
+      "kind": "consulting",
+      "stage": "Active Prospect",
+      "status": "ready",
+      "pitchDateLabel": "Pitch delivered Jul 19, 2026 · Meeting held Jul 20",
+      "who": "Alexander Karantzalis, Esq. · Echelon Legal, PLLC",
+      "thesis": "A 4.6-star firm with a 3-page website — the reputation is earned, the platform is not carrying it yet. Real audit, real ranking data, real offer.",
+      "headline": [
+        {
+          "val": "4.6★",
+          "lbl": "client rating"
+        },
+        {
+          "val": "0",
+          "lbl": "Weston searches ranked"
+        },
+        {
+          "val": "$3,000",
+          "lbl": "recommended tier"
+        }
+      ]
     }
   ]
 }

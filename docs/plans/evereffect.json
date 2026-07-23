@@ -250,34 +250,57 @@
   "contentWhy": "Most agency prospecting is noise. \"We help businesses grow online\" gets deleted before the second line. Content that qualifies gets replied to, because it names a specific thing the buyer can go check themselves in thirty seconds.\n\nRule: every outreach piece answers the three questions the owner is silently asking. (1) Why are you emailing me specifically — because of a dated event, named. (2) Why now — because the window on a merger closes. (3) What's the ask — small, verifiable, and costing them nothing to accept.",
   "auditFindings": {
     "label": "evereffect.com — live audit, 2026-07-20",
-    "intro": "The posting asks this hire to be \"strategic leader for evereffect.com performance.\" So I audited it before the call rather than promising to audit it after. Three gaps, three things already working. Every item was checked live on 2026-07-20 and is verifiable in a browser during the interview.",
-    "gaps": [
+    "intro": "The posting asks this hire to be \"strategic leader for evereffect.com performance.\" So I audited it before the call rather than promising to audit it after — the same depth of breakdown we give a prospective client, turned on our own site. Every item was checked live on 2026-07-20 and is verifiable in a browser during the interview.",
+    "sourceLine": "Source: live crawl of evereffect.com, 2026-07-20.",
+    "headline": [
       {
-        "title": "Publishing stopped 14 months ago",
-        "detail": "The newest blog post is dated May 29, 2025. For an agency selling content marketing and AI SEO, the site is the work sample — and right now it argues the opposite case.",
-        "fix": "Restart cadence in the first 30 days. Two posts a month, both built off real client outcomes rather than topic-generator filler."
+        "val": "14 mo",
+        "lbl": "Since last blog post"
       },
       {
+        "val": "0",
+        "lbl": "Gated assets / lead magnets"
+      },
+      {
+        "val": "0",
+        "lbl": "Case studies with a number"
+      },
+      {
+        "val": "3",
+        "lbl": "Trust badges, unused as proof"
+      }
+    ],
+    "findings": [
+      {
+        "severity": "critical",
         "title": "No gated asset anywhere on the site",
         "detail": "There is no lead magnet, so there is no email capture, so there is no list. The posting asks this seat to run high-volume email — into a list that does not exist yet.",
         "fix": "Ship one gated asset tied to the merger-fragmentation thesis: a post-acquisition local search checklist. It doubles as the outreach attachment."
       },
       {
+        "severity": "high",
+        "title": "Publishing stopped 14 months ago",
+        "detail": "The newest blog post is dated May 29, 2025. For an agency selling content marketing and AI SEO, the site is the work sample — and right now it argues the opposite case.",
+        "fix": "Restart cadence in the first 30 days. Two posts a month, both built off real client outcomes rather than topic-generator filler."
+      },
+      {
+        "severity": "high",
         "title": "Zero case studies carrying a number",
         "detail": "Every testimonial on the site is qualitative. The tagline is \"ROI-Driven Digital Marketing, Delivering Profits, Not Promises\" — and there is not one published figure backing it.",
         "fix": "One numbers-bearing case study in the first 60 days, using an already-retained client. Classic Auto Insurance is a 15-plus year relationship; that story is sitting there unwritten."
-      }
-    ],
-    "working": [
+      },
       {
+        "severity": "working",
         "title": "Free Digital Performance Analysis CTA",
         "detail": "A real, low-friction offer already live on the site. It is the right shape — it just has nothing feeding it."
       },
       {
+        "severity": "working",
         "title": "Trust signals are in place",
         "detail": "2025 Premier Google Partner (top 3% of agencies, awarded on retention and performance rather than ad spend), Google Guaranteed and Screened, plus Clutch and UpCity badges."
       },
       {
+        "severity": "working",
         "title": "Three offices and a live phone number in the header",
         "detail": "317.967.6779 in the header, three office locations. The local proof is credible — it just isn't converting traffic that never arrives."
       }

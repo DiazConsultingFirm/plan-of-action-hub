@@ -253,9 +253,144 @@ export function ContentTab({ data }) {
 
 /* ── SITE AUDIT ── */
 
+const SEVERITY_LABEL = { critical: 'Critical', high: 'High', working: 'Working' }
+
+function SourceLine({ text }) {
+  if (!text) return null
+  return <p className="audit-source">{text}</p>
+}
+
+function AuditHeadline({ stats }) {
+  if (!stats?.length) return null
+  return (
+    <div className="audit-headline-row">
+      {stats.map((s, i) => (
+        <div key={i} className="audit-headline-stat">
+          <div className="audit-headline-val">{s.val}</div>
+          <div className="audit-headline-lbl">{s.lbl}</div>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+function AuditFindingsGroup({ severity, items }) {
+  if (!items?.length) return null
+  return (
+    <div className="audit-group">
+      <div className={`audit-col-label sev-${severity}`}>
+        <span className={`sev-dot sev-${severity}`} />
+        {SEVERITY_LABEL[severity]} ({items.length})
+      </div>
+      {items.map((f, i) => (
+        <motion.div
+          key={i}
+          className={`audit-item sev-${severity}`}
+          initial={{ opacity: 0, x: -8 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: i * 0.06 }}
+        >
+          <div className="audit-item-title">{f.title}</div>
+          <div className="audit-item-detail">{f.detail}</div>
+          {f.fix && (
+            <div className="audit-item-fix">
+              <strong>Fix:</strong> {f.fix}
+            </div>
+          )}
+        </motion.div>
+      ))}
+    </div>
+  )
+}
+
+function AuditRankingTable({ table }) {
+  if (!table) return null
+  return (
+    <div className="audit-block">
+      <div className="plan-section-head" style={{ marginBottom: 10 }}>
+        <div>
+          <h3 className="audit-block-title">{table.label}</h3>
+          {table.note && <p className="audit-block-note">{table.note}</p>}
+        </div>
+      </div>
+      <div className="audit-table-wrap">
+        <table className="audit-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Result</th>
+              <th>Why they rank</th>
+            </tr>
+          </thead>
+          <tbody>
+            {table.rows.map((r, i) => (
+              <tr key={i} className={r.isSubject ? 'audit-table-subject' : ''}>
+                <td>{r.rank}</td>
+                <td>{r.result}</td>
+                <td>{r.why}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <SourceLine text={table.sourceLine} />
+    </div>
+  )
+}
+
+function AuditCompetitorTable({ table }) {
+  if (!table) return null
+  return (
+    <div className="audit-block">
+      <div className="plan-section-head" style={{ marginBottom: 10 }}>
+        <div>
+          <h3 className="audit-block-title">{table.label}</h3>
+          {table.note && <p className="audit-block-note">{table.note}</p>}
+        </div>
+      </div>
+      <div className="audit-table-wrap">
+        <table className="audit-table audit-table-compare">
+          <thead>
+            <tr>
+              <th>Attribute</th>
+              {table.columns.map((c, i) => (
+                <th key={i} className={i === table.columns.length - 1 ? 'audit-col-future' : ''}>
+                  {c}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {table.rows.map((r, i) => (
+              <tr key={i}>
+                <td className="audit-attr">{r.attribute}</td>
+                {r.values.map((v, j) => (
+                  <td key={j} className={j === r.values.length - 1 ? 'audit-col-future' : ''}>
+                    {v}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <SourceLine text={table.sourceLine} />
+    </div>
+  )
+}
+
 export function AuditTab({ data }) {
   const audit = data.auditFindings
   if (!audit) return <Tab><GlassCard>No audit recorded for this plan.</GlassCard></Tab>
+
+  // Two schema shapes are supported so older plans don't need a rewrite:
+  // legacy = { gaps: [], working: [] } (binary); current = { findings: [] }
+  // grouped by severity, plus optional headline stats and tables.
+  const findings = audit.findings || [
+    ...(audit.gaps || []).map((g) => ({ ...g, severity: 'high' })),
+    ...(audit.working || []).map((w) => ({ ...w, severity: 'working' })),
+  ]
+  const bySeverity = (sev) => findings.filter((f) => f.severity === sev)
 
   return (
     <Tab>
@@ -267,43 +402,21 @@ export function AuditTab({ data }) {
         />
 
         <p className="audit-intro">{audit.intro}</p>
+        <AuditHeadline stats={audit.headline} />
+        <SourceLine text={audit.sourceLine} />
 
-        <div className="grid-2">
+        <div className="grid-2" style={{ marginTop: 18 }}>
           <div>
-            <div className="audit-col-label gap">Gaps — fixable, and mine to fix</div>
-            {audit.gaps.map((g, i) => (
-              <motion.div
-                key={i}
-                className="audit-item gap"
-                initial={{ opacity: 0, x: -8 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.08 }}
-              >
-                <div className="audit-item-title">{g.title}</div>
-                <div className="audit-item-detail">{g.detail}</div>
-                <div className="audit-item-fix">
-                  <strong>Fix:</strong> {g.fix}
-                </div>
-              </motion.div>
-            ))}
+            <AuditFindingsGroup severity="critical" items={bySeverity('critical')} />
+            <AuditFindingsGroup severity="high" items={bySeverity('high')} />
           </div>
-
           <div>
-            <div className="audit-col-label ok">Already working — do not touch</div>
-            {audit.working.map((w, i) => (
-              <motion.div
-                key={i}
-                className="audit-item ok"
-                initial={{ opacity: 0, x: 8 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.08 }}
-              >
-                <div className="audit-item-title">{w.title}</div>
-                <div className="audit-item-detail">{w.detail}</div>
-              </motion.div>
-            ))}
+            <AuditFindingsGroup severity="working" items={bySeverity('working')} />
           </div>
         </div>
+
+        <AuditRankingTable table={audit.rankingTable} />
+        <AuditCompetitorTable table={audit.competitorTable} />
       </GlassCard>
     </Tab>
   )
@@ -418,7 +531,11 @@ export function PitchTab({ data }) {
 
         <div className="pitch-meta">
           <MetaRow label="Author" value={data.plan.author} />
-          <MetaRow label="Interview" value={data.plan.interviewLabel} />
+          <MetaRow
+            label={data.plan.kind === 'consulting' ? 'Status' : 'Interview'}
+            value={data.plan.kind === 'consulting' ? data.plan.pitchDateLabel : data.plan.interviewLabel}
+          />
+          {data.plan.contact && <MetaRow label="Contact" value={data.plan.contact} />}
           <MetaRow label="Version" value={`${data.plan.version} · ${data.plan.date}`} />
         </div>
       </div>
