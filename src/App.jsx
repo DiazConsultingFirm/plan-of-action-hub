@@ -65,6 +65,13 @@ export default function App() {
 
   const openPlan = useCallback(
     (entry) => {
+      // Client dashboards (Gerlach, Robert Davis) are separately-built, already-
+      // live apps — they don't have a plans/*.json to render in-hub. Link out
+      // instead of trying to fetch a plan file that doesn't exist for them.
+      if (entry.kind === 'client' && entry.external) {
+        window.open(entry.external, '_blank', 'noopener')
+        return
+      }
       setActiveId(entry.id)
       if (planCache[entry.id]) return
       fetch(planUrl(entry.file))

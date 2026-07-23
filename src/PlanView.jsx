@@ -6,10 +6,10 @@ import {
   MilestonesTab, ConceptsTab, OfferTab, DashboardTab, PitchTab, DashboardsTab, AuditHero,
 } from './PlanTabs'
 
-// Tabs that belong to the "audit cluster" — the hero banner (headline + stat
-// row, modelled on the real Echelon pitch page) stays visible above all of
-// these so the research depth doesn't reset to a small heading on every click.
-const AUDIT_CLUSTER = new Set(['audit', 'ranking', 'competitors', 'milestones', 'concepts', 'offer', 'yourdashboard'])
+// "Your Dashboard" doesn't open an in-hub page — it opens the real, live
+// client-reporting dashboard DCF already runs, the same one shown to real
+// clients (Gerlach, Robert Davis). Proof the system is real, not a mockup.
+const LIVE_DASHBOARD_URL = 'https://diazconsultingfirm.github.io/gerlachlegal-website/dashboard/'
 
 const TAB_LABELS = {
   full: 'Full Plan',
@@ -128,21 +128,25 @@ export default function PlanView({ data, roster, onHome, onSwitch }) {
         </div>
       </motion.header>
 
-      {/* The audit hero acts as an extended header for its cluster of tabs —
-          it renders above the tab row, same order as the real Echelon page
-          (dark headline banner, then the tab row, then content below it). */}
-      {AUDIT_CLUSTER.has(activeTab) && (
-        <div className="audit-hero-wrap">
-          <AuditHero data={data} />
-        </div>
-      )}
+      {/* Header before nav, on every tab (not just the audit cluster) —
+          same order as the real Echelon page: dark headline banner, then the
+          tab row, then content below it. AuditHero itself renders nothing
+          when a plan has no hero data (FusionAuth), so this is safe as a
+          blanket render. */}
+      <div className="audit-hero-wrap">
+        <AuditHero data={data} />
+      </div>
 
       <nav className="tabbar">
         {tabs.map((t) => (
           <button
             key={t}
             className={`tab ${activeTab === t ? 'active' : ''}`}
-            onClick={() => setActiveTab(t)}
+            onClick={() =>
+              t === 'yourdashboard'
+                ? window.open(LIVE_DASHBOARD_URL, '_blank', 'noopener')
+                : setActiveTab(t)
+            }
           >
             {TAB_LABELS[t] || t}
           </button>

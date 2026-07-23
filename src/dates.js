@@ -27,16 +27,16 @@ export function countdownLabel(days) {
 
 /**
  * Sort plans soonest-first. Interview-kind plans (a real date on the calendar)
- * always sort ahead of consulting-kind plans (an open pursuit, no fixed date —
- * see PlanView's isConsulting), since those have no "days away" urgency to
- * rank by. Among interview plans: soonest first, already-held pushed to the
- * end. Among consulting plans: most recently touched first.
+ * always sort ahead of dateless kinds — consulting (an open pursuit) and
+ * client (an already-live dashboard link) — neither has "days away" urgency
+ * to rank by. Among interview plans: soonest first, already-held pushed to
+ * the end. Among dateless plans: most recently touched first.
  */
 export function byInterviewDate(a, b) {
-  const aConsulting = a.kind === 'consulting'
-  const bConsulting = b.kind === 'consulting'
-  if (aConsulting !== bConsulting) return aConsulting ? 1 : -1
-  if (aConsulting && bConsulting) {
+  const aDateless = a.kind === 'consulting' || a.kind === 'client'
+  const bDateless = b.kind === 'consulting' || b.kind === 'client'
+  if (aDateless !== bDateless) return aDateless ? 1 : -1
+  if (aDateless && bDateless) {
     return (b.pitchDate || '').localeCompare(a.pitchDate || '')
   }
   const da = daysUntil(a.interviewDate)

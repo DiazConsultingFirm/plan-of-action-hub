@@ -64,6 +64,44 @@
       ]
     },
     {
+      "id": "gerlach",
+      "company": "Gerlach Law, PLLC",
+      "role": "Family Law & Juvenile Dependency",
+      "mark": "GL",
+      "accent": "#A855F7",
+      "kind": "client",
+      "external": "https://diazconsultingfirm.github.io/gerlachlegal-website/dashboard/",
+      "stage": "Active Client",
+      "status": "ready",
+      "pitchDateLabel": "Live since Jul 13, 2026 · Growth plan locked Jul 12",
+      "who": "Angela E. Gerlach, Esq. · Fort Lauderdale, FL",
+      "thesis": "Site live via GoDaddy passthrough theme. Full audit + 12-month growth plan locked — remaining blockers are logo assets and Cal.com hours, both client-side.",
+      "headline": [
+        { "val": "31%", "lbl": "engagement complete" },
+        { "val": "$2,000", "lbl": "total contract" },
+        { "val": "Live", "lbl": "site status" }
+      ]
+    },
+    {
+      "id": "robert-davis",
+      "company": "Robert Davis P.A.",
+      "role": "Estate Planning & Elder Law",
+      "mark": "RD",
+      "accent": "#14B8A6",
+      "kind": "client",
+      "external": "https://robertdavispa.com/",
+      "stage": "Active Client",
+      "status": "ready",
+      "pitchDateLabel": "Live since May 21, 2026 · Growth plan locked Jul 12",
+      "who": "Robert Davis, Esq. · Fort Lauderdale, FL",
+      "thesis": "Phase 1 live: 10 statute-cited practice areas, static HTML, Netlify + Zapier. GBP video verification is the one call that unblocks the $500 balance and the Phase 2 retainer at once.",
+      "headline": [
+        { "val": "$500", "lbl": "balance remaining" },
+        { "val": "$1,500/mo", "lbl": "Phase 2 retainer (unsigned)" },
+        { "val": "Live", "lbl": "site status" }
+      ]
+    },
+    {
       "id": "echelon",
       "file": "echelon.json",
       "company": "Echelon Legal",

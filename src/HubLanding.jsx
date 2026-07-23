@@ -3,7 +3,7 @@ import { daysUntil, countdownLabel, byInterviewDate } from './dates'
 
 export default function HubLanding({ roster, onOpen }) {
   const plans = [...roster.plans].sort(byInterviewDate)
-  const next = plans.find((p) => p.kind !== 'consulting')
+  const next = plans.find((p) => p.kind !== 'consulting' && p.kind !== 'client')
 
   return (
     <motion.div
@@ -37,9 +37,11 @@ export default function HubLanding({ roster, onOpen }) {
 
 function PlanCard({ plan, index, onOpen }) {
   const isConsulting = plan.kind === 'consulting'
-  const days = isConsulting ? null : daysUntil(plan.interviewDate)
-  const { num, lbl } = isConsulting ? {} : countdownLabel(days)
-  const urgency = isConsulting ? '' : days < 0 ? 'past' : days <= 3 ? 'imminent' : ''
+  const isClient = plan.kind === 'client'
+  const isBadgeless = isConsulting || isClient
+  const days = isBadgeless ? null : daysUntil(plan.interviewDate)
+  const { num, lbl } = isBadgeless ? {} : countdownLabel(days)
+  const urgency = isBadgeless ? '' : days < 0 ? 'past' : days <= 3 ? 'imminent' : ''
 
   return (
     <motion.button
@@ -58,7 +60,14 @@ function PlanCard({ plan, index, onOpen }) {
           <div className="plan-card-company">{plan.company}</div>
           <div className="plan-card-role">{plan.role}</div>
         </div>
-        {isConsulting ? (
+        {isClient ? (
+          <div className="plan-countdown">
+            <div className="plan-countdown-num" style={{ fontSize: 15, color: 'var(--gold)' }}>
+              ● Live
+            </div>
+            <div className="plan-countdown-lbl">active client</div>
+          </div>
+        ) : isConsulting ? (
           <div className="plan-countdown">
             <div className="plan-countdown-num" style={{ fontSize: 15, color: 'var(--gold)' }}>
               ● Open
@@ -73,7 +82,7 @@ function PlanCard({ plan, index, onOpen }) {
         )}
       </div>
 
-      <div className="plan-when">{isConsulting ? plan.pitchDateLabel : plan.interviewLabel}</div>
+      <div className="plan-when">{isBadgeless ? plan.pitchDateLabel : plan.interviewLabel}</div>
       <div className="plan-who">{plan.who}</div>
       <div className="plan-thesis">{plan.thesis}</div>
       {plan.comp && <div className="plan-who"><strong style={{ color: 'var(--text)' }}>Comp:</strong> {plan.comp}</div>}
@@ -89,7 +98,7 @@ function PlanCard({ plan, index, onOpen }) {
 
       <div className="plan-card-foot">
         <span className="plan-stage-chip">{plan.stage}</span>
-        <span>Open plan of action →</span>
+        <span>{isClient ? 'Open dashboard →' : 'Open plan of action →'}</span>
       </div>
     </motion.button>
   )
