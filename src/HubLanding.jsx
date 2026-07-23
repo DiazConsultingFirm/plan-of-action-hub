@@ -35,6 +35,15 @@ export default function HubLanding({ roster, onOpen }) {
   )
 }
 
+// Stop the click from also bubbling up to the card's own onOpen — otherwise
+// launching the site/dashboard link-button also fires the card's main action.
+function stopAnd(fn) {
+  return (e) => {
+    e.stopPropagation()
+    fn?.(e)
+  }
+}
+
 function PlanCard({ plan, index, onOpen }) {
   const isConsulting = plan.kind === 'consulting'
   const isClient = plan.kind === 'client'
@@ -44,11 +53,13 @@ function PlanCard({ plan, index, onOpen }) {
   const urgency = isBadgeless ? '' : days < 0 ? 'past' : days <= 3 ? 'imminent' : ''
 
   return (
-    <motion.button
-      type="button"
+    <motion.div
       className="plan-card"
       style={{ '--plan-accent': plan.accent }}
       onClick={onOpen}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && onOpen()}
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.08 }}
@@ -98,8 +109,36 @@ function PlanCard({ plan, index, onOpen }) {
 
       <div className="plan-card-foot">
         <span className="plan-stage-chip">{plan.stage}</span>
-        <span>{isClient ? 'Open dashboard →' : 'Open plan of action →'}</span>
+        <div className="plan-card-links">
+          {plan.site && (
+            <a
+              className="plan-link-btn"
+              href={plan.site}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={stopAnd()}
+            >
+              Site ↗
+            </a>
+          )}
+          {plan.dashboard && (
+            <a
+              className="plan-link-btn"
+              href={plan.dashboard}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={stopAnd()}
+            >
+              Dashboard ↗
+            </a>
+          )}
+          {!plan.site && !plan.dashboard && (
+            <span className="plan-card-open-hint">
+              {isClient ? 'Open dashboard →' : 'Open plan of action →'}
+            </span>
+          )}
+        </div>
       </div>
-    </motion.button>
+    </motion.div>
   )
 }

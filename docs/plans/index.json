@@ -33,7 +33,8 @@
           "val": "Monthly",
           "lbl": "quota cadence"
         }
-      ]
+      ],
+      "site": "https://www.evereffect.com/"
     },
     {
       "id": "fusionauth",
@@ -61,7 +62,8 @@
           "val": "$45-60K",
           "lbl": "pipeline/mo"
         }
-      ]
+      ],
+      "site": "https://fusionauth.io/"
     },
     {
       "id": "gerlach",
@@ -77,10 +79,21 @@
       "who": "Angela E. Gerlach, Esq. · Fort Lauderdale, FL",
       "thesis": "Site live via GoDaddy passthrough theme. Full audit + 12-month growth plan locked — remaining blockers are logo assets and Cal.com hours, both client-side.",
       "headline": [
-        { "val": "31%", "lbl": "engagement complete" },
-        { "val": "$2,000", "lbl": "total contract" },
-        { "val": "Live", "lbl": "site status" }
-      ]
+        {
+          "val": "31%",
+          "lbl": "engagement complete"
+        },
+        {
+          "val": "$2,000",
+          "lbl": "total contract"
+        },
+        {
+          "val": "Live",
+          "lbl": "site status"
+        }
+      ],
+      "site": "https://gerlachlegal.com",
+      "dashboard": "https://diazconsultingfirm.github.io/gerlachlegal-website/dashboard/"
     },
     {
       "id": "robert-davis",
@@ -96,10 +109,20 @@
       "who": "Robert Davis, Esq. · Fort Lauderdale, FL",
       "thesis": "Phase 1 live: 10 statute-cited practice areas, static HTML, Netlify + Zapier. GBP video verification is the one call that unblocks the $500 balance and the Phase 2 retainer at once.",
       "headline": [
-        { "val": "$500", "lbl": "balance remaining" },
-        { "val": "$1,500/mo", "lbl": "Phase 2 retainer (unsigned)" },
-        { "val": "Live", "lbl": "site status" }
-      ]
+        {
+          "val": "$500",
+          "lbl": "balance remaining"
+        },
+        {
+          "val": "$1,500/mo",
+          "lbl": "Phase 2 retainer (unsigned)"
+        },
+        {
+          "val": "Live",
+          "lbl": "site status"
+        }
+      ],
+      "site": "https://robertdavispa.com/"
     },
     {
       "id": "echelon",
@@ -127,7 +150,8 @@
           "val": "$3,000",
           "lbl": "recommended tier"
         }
-      ]
+      ],
+      "site": "https://echelonlegalfl.com"
     }
   ]
 }

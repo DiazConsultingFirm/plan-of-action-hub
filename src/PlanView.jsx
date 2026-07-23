@@ -6,11 +6,6 @@ import {
   MilestonesTab, ConceptsTab, OfferTab, DashboardTab, PitchTab, DashboardsTab, AuditHero,
 } from './PlanTabs'
 
-// "Your Dashboard" doesn't open an in-hub page — it opens the real, live
-// client-reporting dashboard DCF already runs, the same one shown to real
-// clients (Gerlach, Robert Davis). Proof the system is real, not a mockup.
-const LIVE_DASHBOARD_URL = 'https://diazconsultingfirm.github.io/gerlachlegal-website/dashboard/'
-
 const TAB_LABELS = {
   full: 'Full Plan',
   rhythm: 'Rhythm',
@@ -142,11 +137,7 @@ export default function PlanView({ data, roster, onHome, onSwitch }) {
           <button
             key={t}
             className={`tab ${activeTab === t ? 'active' : ''}`}
-            onClick={() =>
-              t === 'yourdashboard'
-                ? window.open(LIVE_DASHBOARD_URL, '_blank', 'noopener')
-                : setActiveTab(t)
-            }
+            onClick={() => setActiveTab(t)}
           >
             {TAB_LABELS[t] || t}
           </button>
