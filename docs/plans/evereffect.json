@@ -24,6 +24,8 @@
       "ranking",
       "competitors",
       "milestones",
+      "concepts",
+      "offer",
       "yourdashboard",
       "pitch",
       "dashboards"
@@ -62,6 +64,8 @@
       }
     ],
     "milestonesTitle": "The Plan — Milestones That Prove the Engine Works",
+    "conceptsTitle": "Concepts — What I'd Actually Ship First",
+    "offerTitle": "What I'm Proposing",
     "heroHeadline": "EverEffect is a top-3% Google Partner |that hasn't published in 14 months.",
     "heroSub": "The reputation and the client work are real — the agency's own marketing hasn't kept pace. This is the site audit, the account research, and the plan, all built before the call.",
     "heroPreparedFor": "Chris Bross, Thomas Heed & Collin · 2026-07-20"
@@ -444,6 +448,59 @@
       ]
     }
   },
+  "conceptsIntro": "Not website mockups — this isn't a sales pitch, it's a job interview. These are the two concrete moves I'd make first, both traced straight back to the findings on the Site Audit tab, not invented for this page.",
+  "concepts": [
+    {
+      "eyebrow": "Concept — Immediate",
+      "name": "The 30-Day Fix",
+      "desc": "Ship a gated asset tied to the merger-fragmentation thesis, restart the publishing cadence at two posts a month, and write the first numbers-bearing case study using an already-retained client — Classic Auto Insurance, a 15-plus-year relationship sitting there unwritten."
+    },
+    {
+      "eyebrow": "Concept — Ongoing",
+      "name": "The Trigger Board as a Living System",
+      "desc": "Turn the seven-account Indiana board into a standing 60-account board with automated monitoring across Insurance Journal, PR Newswire, and Indiana Secretary of State filings — so pipeline doesn't restart from zero every month, it compounds."
+    }
+  ],
+  "offerIntro": "Not a sales tier — this is what I'm committing to deliver in this seat, and what I'm asking in return before I start.",
+  "offerTiers": [
+    {
+      "name": "What I Bring",
+      "price": "Day 1",
+      "priceNote": "ready to start",
+      "sub": "The commitment",
+      "items": [
+        "A territory thesis that's built, not described — 7 named Indiana accounts, each with a dated public trigger",
+        "The evereffect.com audit already done — 3 fixable gaps found before the call, not promised for after",
+        "The 5 F's weekly rhythm — the same discipline that took two below-quota reps to consistent attainment at Magic in a quarter",
+        "By day 90: a live trigger board, a documented playbook, a first close, and a site producing inbound it wasn't producing before"
+      ]
+    },
+    {
+      "name": "What I'm Asking",
+      "price": "Before Day 1",
+      "priceNote": "open questions",
+      "sub": "The ask",
+      "items": [
+        "Is the 20% new-business comp a one-time payout, or a residual on the recurring retainer?",
+        "Is the monthly quota measured on closed revenue or signed contract value?",
+        "Who owns evereffect.com today — can this seat actually ship the fixes, or only recommend them?"
+      ]
+    },
+    {
+      "name": "How You'll Know It's Working",
+      "price": "Day 90",
+      "priceNote": "the proof bar",
+      "recommended": true,
+      "sub": "The check",
+      "items": [
+        "A trigger board that runs live, not a static list checked once",
+        "The month called by week two, not discovered lost at month end",
+        "One repeatable playbook, documented well enough to hand to a second seat",
+        "evereffect.com producing inbound it did not produce before I got here"
+      ]
+    }
+  ],
+  "offerWhyNow": "Indiana's insurance and home-services M&A wave is running right now — 695 U.S. agency deals in 2025, up 27% year over year, private equity involved in 69% of them. The board above is already built from real, dated triggers. The only variable left is whether I'm the one working it.",
   "phases": [
     {
       "num": "Days 1–30",

@@ -550,7 +550,7 @@ export function ConceptsTab({ data }) {
       <GlassCard>
         <SectionHead
           badge="◐"
-          title="Concepts — Two Directions, Built for This Firm"
+          title={data.plan.conceptsTitle || 'Concepts — Two Directions, Built for This Firm'}
           badgeStyle={{ background: 'linear-gradient(135deg,#3BA55C,#1F7A3D)', color: '#060A12' }}
         />
         {data.conceptsIntro && <p className="audit-intro">{data.conceptsIntro}</p>}
@@ -585,7 +585,7 @@ export function OfferTab({ data }) {
       <GlassCard>
         <SectionHead
           badge="$"
-          title="The Offer"
+          title={data.plan.offerTitle || 'The Offer'}
           badgeStyle={{ background: 'linear-gradient(135deg,#E8A838,#B8862A)', color: '#060A12' }}
         />
         {data.offerIntro && <p className="audit-intro">{data.offerIntro}</p>}

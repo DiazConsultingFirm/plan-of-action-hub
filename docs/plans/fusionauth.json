@@ -23,9 +23,13 @@
       "funnel",
       "content",
       "milestones",
+      "concepts",
+      "offer",
       "pitch",
       "dashboards"
     ],
+    "conceptsTitle": "Concepts — What I'd Actually Ship First",
+    "offerTitle": "What I'm Proposing",
     "links": [
       {
         "label": "FusionAuth plan dashboard (v2, single-company)",
@@ -250,6 +254,59 @@
     }
   ],
   "contentWhy": "Most BDR sequences are noise. 'Our platform helps you...' gets deleted. Content that qualifies gets replied to — because it proves you did your homework and names a specific pain the buyer recognizes.\n\nRule: every outreach piece must answer three questions the buyer is silently asking: (1) Why are you emailing me specifically? (2) Why now? (3) What's the ask?",
+  "conceptsIntro": "Not website mockups — this isn't a sales pitch, it's a job interview. These are the two concrete builds I'd stand up first, both traced straight back to the funnel and rhythm already laid out on the other tabs, not invented for this page.",
+  "concepts": [
+    {
+      "eyebrow": "Concept — Immediate",
+      "name": "The Two-Source Funnel, Live",
+      "desc": "Stand up PLG-signal triage — free-tier signups from 25+-engineer companies, enriched and contacted within 2 hours — running alongside the 100-account outbound list, both feeding the same SPICED gate so nothing gets called pipeline until pain, impact, and an economic buyer are documented."
+    },
+    {
+      "eyebrow": "Concept — Ongoing",
+      "name": "The Tool Stack as One Motion",
+      "desc": "HubSpot sequences, Apollo/Zoominfo enrichment, LinkedIn Sales Nav, and Glyphic call intelligence wired to hand off to each other automatically — a signal caught in one tool triggers the next step, instead of four disconnected logins a rep has to manually bridge."
+    }
+  ],
+  "offerIntro": "Not a sales tier — this is what I'm committing to build in this seat, and what I'm asking before I start.",
+  "offerTiers": [
+    {
+      "name": "What I Bring",
+      "price": "Day 1",
+      "priceNote": "ready to start",
+      "sub": "The commitment",
+      "items": [
+        "The 5 F's operating rhythm — the same cadence that took two below-quota reps to consistent attainment at Magic in a quarter",
+        "A two-source funnel already mapped: PLG triage plus outbound, one SPICED qualification bar for both",
+        "Four content wedges ready to test on day one — Auth0 cost, Cognito compliance, SAML trigger, PLG fast-follow",
+        "Full accountability at day 90 — I'll tell you what I hit and what I missed, before you have to ask"
+      ]
+    },
+    {
+      "name": "What I'm Asking",
+      "price": "Before Day 1",
+      "priceNote": "open questions",
+      "sub": "The ask",
+      "items": [
+        "How far has the Claude/Clay/Wiza outbound workflow named in the posting already gone internally?",
+        "Is this seat player-coach from day one, or IC until the second BDR lands?",
+        "What share of pipeline today is PLG free-tier expansion versus true net-new outbound?"
+      ]
+    },
+    {
+      "name": "How You'll Know It's Working",
+      "price": "Day 90",
+      "priceNote": "the proof bar",
+      "recommended": true,
+      "sub": "The check",
+      "items": [
+        "50–70 qualified meetings a month",
+        "AE acceptance above 70%",
+        "Forecast accuracy within ±10%",
+        "BDR #2 running independently, third-hire business case ready"
+      ]
+    }
+  ],
+  "offerWhyNow": "FusionAuth already has 20M+ downloads and a freemium base converting at 2–5% — the product-market fit is proven. What's missing is the operating system that turns that into predictable, forecastable pipeline. That's exactly the seat that's open now.",
   "phases": [
     {
       "num": "Days 1–30",
