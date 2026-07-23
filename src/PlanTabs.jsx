@@ -123,7 +123,7 @@ export function RhythmTab({ data }) {
 
 /* ── FUNNEL ── */
 
-export function FunnelTab({ data }) {
+export function FunnelTab({ data, hideMetrics = false }) {
   return (
     <Tab>
       <GlassCard>
@@ -189,7 +189,7 @@ export function FunnelTab({ data }) {
           ))}
         </div>
 
-        <MetricRow metrics={data.metrics} />
+        {!hideMetrics && <MetricRow metrics={data.metrics} />}
       </GlassCard>
     </Tab>
   )

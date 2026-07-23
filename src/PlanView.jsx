@@ -4,6 +4,7 @@ import { daysUntil, countdownLabel } from './dates'
 import { RhythmTab, FunnelTab, ContentTab, AuditTab, MilestonesTab, PitchTab } from './PlanTabs'
 
 const TAB_LABELS = {
+  full: 'Full Plan',
   rhythm: 'Rhythm',
   funnel: 'Funnel',
   content: 'Content',
@@ -21,12 +22,31 @@ const TAB_COMPONENTS = {
   pitch: PitchTab,
 }
 
+/* The whole plan as one continuous document — the original static Plan of
+   Action read this way, and the full scroll is what makes the depth visible.
+   Sections stack in the plan's own tab order. */
+function FullPlan({ data, sections }) {
+  return (
+    <>
+      {sections.map((t) => {
+        const Section = TAB_COMPONENTS[t]
+        if (!Section) return null
+        // Rhythm already shows the metric tiles; skip the duplicate row Funnel
+        // would add right underneath it in the continuous view.
+        const extra = t === 'funnel' ? { hideMetrics: true } : {}
+        return <Section key={t} data={data} {...extra} />
+      })}
+    </>
+  )
+}
+
 export default function PlanView({ data, roster, onHome, onSwitch }) {
-  const tabs = data.plan.tabs?.length ? data.plan.tabs : Object.keys(TAB_COMPONENTS)
-  const [activeTab, setActiveTab] = useState(tabs[0])
+  const sections = data.plan.tabs?.length ? data.plan.tabs : Object.keys(TAB_COMPONENTS)
+  const tabs = ['full', ...sections]
+  const [activeTab, setActiveTab] = useState('full')
   const days = daysUntil(data.plan.interviewDate)
   const { num, lbl } = countdownLabel(days)
-  const ActiveTab = TAB_COMPONENTS[activeTab] || RhythmTab
+  const ActiveTab = TAB_COMPONENTS[activeTab]
 
   return (
     <>
@@ -87,7 +107,11 @@ export default function PlanView({ data, roster, onHome, onSwitch }) {
       <main className="main-content">
         {/* No AnimatePresence here: its direct child is a plain component, so
             mode="wait" never sees the exit complete and the swap deadlocks. */}
-        <ActiveTab key={activeTab} data={data} />
+        {activeTab === 'full' ? (
+          <FullPlan key="full" data={data} sections={sections} />
+        ) : (
+          <ActiveTab key={activeTab} data={data} />
+        )}
       </main>
     </>
   )
