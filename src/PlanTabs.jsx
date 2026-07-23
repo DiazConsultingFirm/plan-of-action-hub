@@ -416,6 +416,7 @@ export function AuditTab({ data }) {
         </div>
 
         <AuditRankingTable table={audit.rankingTable} />
+        <AuditRankingTable table={audit.targetBoard} />
         <AuditCompetitorTable table={audit.competitorTable} />
       </GlassCard>
     </Tab>

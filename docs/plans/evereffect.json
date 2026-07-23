@@ -250,7 +250,7 @@
   "contentWhy": "Most agency prospecting is noise. \"We help businesses grow online\" gets deleted before the second line. Content that qualifies gets replied to, because it names a specific thing the buyer can go check themselves in thirty seconds.\n\nRule: every outreach piece answers the three questions the owner is silently asking. (1) Why are you emailing me specifically — because of a dated event, named. (2) Why now — because the window on a merger closes. (3) What's the ask — small, verifiable, and costing them nothing to accept.",
   "auditFindings": {
     "label": "evereffect.com — live audit, 2026-07-20",
-    "intro": "The posting asks this hire to be \"strategic leader for evereffect.com performance.\" So I audited it before the call rather than promising to audit it after — the same depth of breakdown we give a prospective client, turned on our own site. Every item was checked live on 2026-07-20 and is verifiable in a browser during the interview.",
+    "intro": "Two audits, not one. First, the agency's own site — the posting asks this hire to be \"strategic leader for evereffect.com performance,\" so it was checked before the call rather than promised for after. Second, the actual client-research deliverable: seven real Indiana companies, each with a dated, public trigger event, built as the answer to \"how would you build a pipeline here from zero\" — the exact skill the posting names as \"quickly audit a business and propose unique solutions.\"",
     "sourceLine": "Source: live crawl of evereffect.com, 2026-07-20.",
     "headline": [
       {
@@ -304,7 +304,132 @@
         "title": "Three offices and a live phone number in the header",
         "detail": "317.967.6779 in the header, three office locations. The local proof is credible — it just isn't converting traffic that never arrives."
       }
-    ]
+    ],
+    "targetBoard": {
+      "label": "The account board — 7 real Indiana prospects, built before the call",
+      "note": "Indiana's insurance and home-services M&A wave is manufacturing EverEffect's exact problem on a predictable clock: when two agencies merge, their digital presence doesn't. Two Google Business Profiles, two sites, split local rankings, orphaned review history. Every account below is real and named, with a dated public trigger — no placeholders, no invented contacts.",
+      "sourceLine": "Source: Insurance Journal, PR Newswire, Insurance Business America, company newsrooms — each dated, cited per account. Also live at the Pipeline Hub work-sample tab.",
+      "rows": [
+        {
+          "rank": "Tier 1",
+          "result": "Capitol Insurance Group — acquired by Shepherd Insurance",
+          "why": "Indianapolis, founded 1981, church/non-profit specialty. Announced 2026-05-28. Insurance AND non-profit are both named EverEffect verticals, same metro as Classic Auto Insurance — best-fit account on the board.",
+          "isSubject": true
+        },
+        {
+          "rank": "Tier 1",
+          "result": "Ecofriendly Mechanical — acquired by Harrell-Fish",
+          "why": "Bloomington HVAC/home-services, founded 1985. Announced 2026-04-08. PE-backed (New State Capital, Dec 2025) — a serial acquirer on a buy-and-build path needs a repeatable integration playbook, which is a retainer, not a project.",
+          "isSubject": true
+        },
+        {
+          "rank": "Tier 2",
+          "result": "Dunaway + Hoosier Insurance — acquired by World Insurance",
+          "why": "New Palestine and Bloomfield, IN. Closed 2026-06-01. National acquirer, centralized marketing — real trigger, harder sell. Worth a call, not a week."
+        },
+        {
+          "rank": "Tier 2",
+          "result": "McCormick Insurance — acquired by WalkerHughes",
+          "why": "Vincennes, IN. Indiana-headquartered acquirer — regional decisions move faster than national ones. GBP management at scale is a named EverEffect service line."
+        },
+        {
+          "rank": "Tier 3",
+          "result": "Gibson Insurance — merged into Unison Risk Advisors",
+          "why": "South Bend, founded 1933, employee-owned, now a platform's 7th company. Platform integrations run 12–18 months — real, but not this quarter."
+        },
+        {
+          "rank": "Tier 3",
+          "result": "Synergy Insurance — Higginbotham's Indiana entry",
+          "why": "Out-of-state acquirer (Texas HQ) with zero local search authority in Indiana. Genuine local-expertise angle, but the budget lives elsewhere."
+        },
+        {
+          "rank": "Ruled out",
+          "result": "Am Law firms in Indianapolis (McCarter & English, Taft, Clyde & Co)",
+          "why": "Real triggers, wrong buyer — in-house marketing and procurement, not an agency-sized deal. Naming what didn't make the board is itself the judgment signal."
+        }
+      ]
+    },
+    "competitorTable": {
+      "label": "Who EverEffect is actually up against on this board",
+      "note": "Six ways an Indiana SMB currently handles marketing instead of hiring an agency — and where EverEffect wins each one.",
+      "columns": [
+        "EverEffect",
+        "SEO-in-a-box vendor",
+        "Freelancer / contractor",
+        "Hiring in-house",
+        "Regional / national agency",
+        "Status quo — referrals"
+      ],
+      "sourceLine": "Source: EverEffect's own published positioning + standard SMB-buyer alternatives, matched against the 7-account board.",
+      "rows": [
+        {
+          "attribute": "Channel coverage",
+          "values": [
+            "Full bench (SEO+PPC+GBP+creative+dev)",
+            "Templated",
+            "One channel",
+            "One generalist",
+            "Full, but junior AM",
+            "None"
+          ]
+        },
+        {
+          "attribute": "Local market knowledge",
+          "values": [
+            "Named local proof (Rhoads, Classic Auto)",
+            "None",
+            "Varies",
+            "N/A",
+            "Thin at SMB tier",
+            "N/A"
+          ]
+        },
+        {
+          "attribute": "Continuity risk",
+          "values": [
+            "Team, not one person",
+            "Churny",
+            "Single point of failure",
+            "Single point of failure",
+            "Low priority = neglect",
+            "N/A"
+          ]
+        },
+        {
+          "attribute": "Cost vs. value",
+          "values": [
+            "One retainer, whole bench",
+            "Cheap, unaccountable",
+            "Cheap, narrow",
+            ">$70K, one skill",
+            "Premium, junior delivery",
+            "Free, but capped"
+          ]
+        },
+        {
+          "attribute": "Response time / SLA",
+          "values": [
+            "Human in one second (client quote)",
+            "Ticket queue",
+            "Depends on availability",
+            "Immediate but narrow",
+            "Slow at SMB tier",
+            "N/A"
+          ]
+        },
+        {
+          "attribute": "Post-M&A digital consolidation",
+          "values": [
+            "Named service motion",
+            "N/A",
+            "N/A",
+            "N/A",
+            "N/A",
+            "N/A — the exact gap this board fills"
+          ]
+        }
+      ]
+    }
   },
   "phases": [
     {
