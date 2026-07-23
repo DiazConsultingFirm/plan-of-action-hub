@@ -540,6 +540,137 @@
   background: rgba(52,211,153,0.05);
 }
 
+/* ── CONCEPTS ── */
+
+.concept-card {
+  padding: 20px;
+  border-radius: var(--radius-sm);
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.concept-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.85;
+}
+
+.concept-name {
+  font-family: 'Space Grotesk', var(--font);
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+.concept-desc {
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--text-dim);
+  margin-top: 8px;
+}
+
+/* ── THE OFFER ── */
+
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.offer-card {
+  position: relative;
+  padding: 20px;
+  border-radius: var(--radius-sm);
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.offer-card.offer-recommended {
+  border-color: rgba(232,168,56,0.45);
+  background: rgba(232,168,56,0.05);
+}
+
+.offer-badge {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--gold);
+  color: #060A12;
+  font-weight: 700;
+}
+
+.offer-name {
+  font-family: 'Space Grotesk', var(--font);
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+.offer-price {
+  font-family: 'Space Grotesk', var(--font);
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--gold);
+  margin-top: 6px;
+}
+
+.offer-price-note {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.offer-sub {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.offer-list {
+  margin-top: 14px;
+  padding-left: 18px;
+  font-size: 12px;
+  line-height: 1.9;
+  color: var(--text-dim);
+}
+
+/* ── YOUR DASHBOARD (tracker) ── */
+
+.dash-tracker-row {
+  display: flex;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.dash-tracker-row:last-child { border-bottom: none; }
+
+.dash-tracker-num {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gold);
+  min-width: 84px;
+}
+
+.dash-tracker-sub {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 6px;
+}
+
 /* ── OPEN QUESTIONS ── */
 
 .oq-item {

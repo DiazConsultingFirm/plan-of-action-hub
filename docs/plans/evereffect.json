@@ -21,7 +21,10 @@
       "funnel",
       "content",
       "audit",
+      "ranking",
+      "competitors",
       "milestones",
+      "yourdashboard",
       "pitch",
       "dashboards"
     ],
@@ -57,7 +60,8 @@
         "note": "Live operations dashboard — shows the systems/rigor behind how DCF actually runs.",
         "icon": "🎛️"
       }
-    ]
+    ],
+    "milestonesTitle": "The Plan — Milestones That Prove the Engine Works"
   },
   "metrics": [
     {

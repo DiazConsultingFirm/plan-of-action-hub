@@ -1,7 +1,10 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { daysUntil, countdownLabel } from './dates'
-import { RhythmTab, FunnelTab, ContentTab, AuditTab, MilestonesTab, PitchTab, DashboardsTab } from './PlanTabs'
+import {
+  RhythmTab, FunnelTab, ContentTab, AuditTab, RankingTab, CompetitorsTab,
+  MilestonesTab, ConceptsTab, OfferTab, DashboardTab, PitchTab, DashboardsTab,
+} from './PlanTabs'
 
 const TAB_LABELS = {
   full: 'Full Plan',
@@ -9,7 +12,12 @@ const TAB_LABELS = {
   funnel: 'Funnel',
   content: 'Content',
   audit: 'Site Audit',
-  milestones: '30/60/90',
+  ranking: 'Where You Rank',
+  competitors: 'Competitors',
+  milestones: 'The Plan',
+  concepts: 'Concepts',
+  offer: 'The Offer',
+  yourdashboard: 'Your Dashboard',
   pitch: 'Pitch',
   dashboards: 'Dashboards',
 }
@@ -19,7 +27,12 @@ const TAB_COMPONENTS = {
   funnel: FunnelTab,
   content: ContentTab,
   audit: AuditTab,
+  ranking: RankingTab,
+  competitors: CompetitorsTab,
   milestones: MilestonesTab,
+  concepts: ConceptsTab,
+  offer: OfferTab,
+  yourdashboard: DashboardTab,
   pitch: PitchTab,
   dashboards: DashboardsTab,
 }

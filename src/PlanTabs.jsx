@@ -379,17 +379,26 @@ function AuditCompetitorTable({ table }) {
   )
 }
 
+/* Each screen below is one page from the real client audit format — Site
+   Audit, Where You Rank, Competitors — split into its own tab instead of one
+   long scroll, so the depth of the research is visible at a glance rather
+   than buried. All three read from the same `auditFindings` object. */
+
+function findingsFrom(audit) {
+  // Two schema shapes are supported so older plans don't need a rewrite:
+  // legacy = { gaps: [], working: [] } (binary); current = { findings: [] }
+  // grouped by severity.
+  return audit.findings || [
+    ...(audit.gaps || []).map((g) => ({ ...g, severity: 'high' })),
+    ...(audit.working || []).map((w) => ({ ...w, severity: 'working' })),
+  ]
+}
+
 export function AuditTab({ data }) {
   const audit = data.auditFindings
   if (!audit) return <Tab><GlassCard>No audit recorded for this plan.</GlassCard></Tab>
 
-  // Two schema shapes are supported so older plans don't need a rewrite:
-  // legacy = { gaps: [], working: [] } (binary); current = { findings: [] }
-  // grouped by severity, plus optional headline stats and tables.
-  const findings = audit.findings || [
-    ...(audit.gaps || []).map((g) => ({ ...g, severity: 'high' })),
-    ...(audit.working || []).map((w) => ({ ...w, severity: 'working' })),
-  ]
+  const findings = findingsFrom(audit)
   const bySeverity = (sev) => findings.filter((f) => f.severity === sev)
 
   return (
@@ -414,10 +423,177 @@ export function AuditTab({ data }) {
             <AuditFindingsGroup severity="working" items={bySeverity('working')} />
           </div>
         </div>
+      </GlassCard>
+    </Tab>
+  )
+}
 
-        <AuditRankingTable table={audit.rankingTable} />
-        <AuditRankingTable table={audit.targetBoard} />
-        <AuditCompetitorTable table={audit.competitorTable} />
+export function RankingTab({ data }) {
+  const audit = data.auditFindings
+  const table = audit?.rankingTable || audit?.targetBoard
+  if (!table) return <Tab><GlassCard>No ranking research recorded for this plan.</GlassCard></Tab>
+
+  return (
+    <Tab>
+      <GlassCard>
+        <SectionHead
+          badge="◎"
+          title="Where You Rank"
+          badgeStyle={{ background: 'linear-gradient(135deg,#3A7AAA,#1B3A4B)', color: '#E8A838' }}
+        />
+        <AuditRankingTable table={table} />
+      </GlassCard>
+    </Tab>
+  )
+}
+
+export function CompetitorsTab({ data }) {
+  const table = data.auditFindings?.competitorTable
+  if (!table) return <Tab><GlassCard>No competitive research recorded for this plan.</GlassCard></Tab>
+
+  return (
+    <Tab>
+      <GlassCard>
+        <SectionHead
+          badge="⚔"
+          title="Competitors"
+          badgeStyle={{ background: 'linear-gradient(135deg,#A78BFA,#7C3AED)', color: '#060A12' }}
+        />
+        <AuditCompetitorTable table={table} />
+      </GlassCard>
+    </Tab>
+  )
+}
+
+/* ── CONCEPTS — only present when a plan ships real design directions ── */
+
+export function ConceptsTab({ data }) {
+  const concepts = data.concepts
+  if (!concepts?.length) return <Tab><GlassCard>No design concepts recorded for this plan.</GlassCard></Tab>
+
+  return (
+    <Tab>
+      <GlassCard>
+        <SectionHead
+          badge="◐"
+          title="Concepts — Two Directions, Built for This Firm"
+          badgeStyle={{ background: 'linear-gradient(135deg,#3BA55C,#1F7A3D)', color: '#060A12' }}
+        />
+        {data.conceptsIntro && <p className="audit-intro">{data.conceptsIntro}</p>}
+        <div className="grid-2" style={{ marginTop: 14 }}>
+          {concepts.map((c, i) => (
+            <motion.div
+              key={i}
+              className="concept-card"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+            >
+              <div className="concept-eyebrow">{c.eyebrow}</div>
+              <div className="concept-name">{c.name}</div>
+              <p className="concept-desc">{c.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+      </GlassCard>
+    </Tab>
+  )
+}
+
+/* ── THE OFFER — only present when a plan has real priced tiers ── */
+
+export function OfferTab({ data }) {
+  const tiers = data.offerTiers
+  if (!tiers?.length) return <Tab><GlassCard>No offer recorded for this plan.</GlassCard></Tab>
+
+  return (
+    <Tab>
+      <GlassCard>
+        <SectionHead
+          badge="$"
+          title="The Offer"
+          badgeStyle={{ background: 'linear-gradient(135deg,#E8A838,#B8862A)', color: '#060A12' }}
+        />
+        {data.offerIntro && <p className="audit-intro">{data.offerIntro}</p>}
+        <div className="offer-grid" style={{ marginTop: 14 }}>
+          {tiers.map((t, i) => (
+            <motion.div
+              key={i}
+              className={`offer-card ${t.recommended ? 'offer-recommended' : ''}`}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+            >
+              {t.recommended && <div className="offer-badge">Recommended</div>}
+              <div className="offer-name">{t.name}</div>
+              <div className="offer-price">
+                {t.price}
+                {t.priceNote && <span className="offer-price-note"> {t.priceNote}</span>}
+              </div>
+              <div className="offer-sub">{t.sub}</div>
+              <ul className="offer-list">
+                {t.items.map((item, j) => (
+                  <li key={j}>{item}</li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
+        {data.offerWhyNow && (
+          <div className="story-block" style={{ marginTop: 16 }}>
+            <span className="story-gold">Why now:</span> {data.offerWhyNow}
+          </div>
+        )}
+      </GlassCard>
+    </Tab>
+  )
+}
+
+/* ── YOUR DASHBOARD — tweaked for an employer plan: not a live client
+   analytics tool, a 90-day tracking view built from the same metrics and
+   milestones already in the plan. Same underlying data as Rhythm + Milestones,
+   presented as something to check progress against, not new content. ── */
+
+export function DashboardTab({ data }) {
+  return (
+    <Tab>
+      <GlassCard>
+        <SectionHead
+          badge="◫"
+          title="Your Dashboard — Tracking the First 90 Days"
+          badgeStyle={{
+            background: 'linear-gradient(135deg,#1B3A4B,#0F2836)',
+            color: '#E8A838',
+            border: '1px solid rgba(232,168,56,0.3)',
+          }}
+        />
+        <p className="audit-intro">
+          {data.plan.kind === 'consulting'
+            ? 'The same live-dashboard discipline DCF runs for every retained client — rankings, calls, and bookings tracked from day one, not guessed at by month three.'
+            : "Not a live product — a plain view of what proves the plan is working, checked the same way every week. This is what I'd actually be tracking, not a slide."}
+        </p>
+
+        <MetricRow metrics={data.metrics} />
+
+        <div className="dash-tracker" style={{ marginTop: 18 }}>
+          {data.phases.map((p, i) => (
+            <div key={i} className="dash-tracker-row">
+              <div className={`dash-tracker-num phase-num`}>{p.num}</div>
+              <div className="dash-tracker-body">
+                <div className="dash-tracker-sub">{p.sub}</div>
+                <ul className="phase-list">
+                  {p.items.map((item, j) => (
+                    <li key={j}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="story-block" style={{ marginTop: 16 }}>
+          <span className="story-gold">What "on track" looks like:</span> {data.phaseProof}
+        </div>
       </GlassCard>
     </Tab>
   )
@@ -432,7 +608,7 @@ export function MilestonesTab({ data }) {
   return (
     <Tab>
       <GlassCard>
-        <SectionHead badge="→" title="30 / 60 / 90 — Milestones That Prove the Engine Works" />
+        <SectionHead badge="→" title={data.plan.milestonesTitle || '30 / 60 / 90 — Milestones That Prove the Engine Works'} />
 
         <div className="phases-grid">
           {data.phases.map((p, i) => (

@@ -22,7 +22,12 @@
       "funnel",
       "content",
       "audit",
+      "ranking",
+      "competitors",
       "milestones",
+      "concepts",
+      "offer",
+      "yourdashboard",
       "pitch"
     ],
     "dataNote": "This is a real, open pitch — not a hired engagement yet. The audit findings and ranking data are live research from 2026-07-19. The Rhythm, Funnel, Content, and Milestones sections describe the engagement DCF is proposing to run if retained — labelled as the plan, not as results already delivered.",
@@ -38,7 +43,8 @@
         "url": "https://diazconsultingfirm.github.io/"
       }
     ],
-    "contact": "Alexander Karantzalis, Esq. · 954-548-3558 · alexander@echelonlegalfl.com"
+    "contact": "Alexander Karantzalis, Esq. · 954-548-3558 · alexander@echelonlegalfl.com",
+    "milestonesTitle": "The Plan — In the Order That Pays"
   },
   "metrics": [
     {
@@ -484,5 +490,65 @@
       "detail": "Live site audit, Weston-area ranking snapshot, RHG Legal competitive comparison, two concept mockups (The Ascent, Echelon Rising), and the three-tier offer — all researched and built same-day.",
       "icon": "build"
     }
-  ]
+  ],
+  "conceptsIntro": "Not templates — concept mockups designed around the firm's own name. \"Echelon\" means a level, a formation that rises. Both directions make that the story; final art direction gets tuned with the client.",
+  "concepts": [
+    {
+      "eyebrow": "Concept A — Light",
+      "name": "The Ascent",
+      "desc": "Warm, established, trust-first. A scroll journey that climbs: build it, protect it, pass it on. Feels like the firm a family hands its legacy to."
+    },
+    {
+      "eyebrow": "Concept B — Dark",
+      "name": "Echelon Rising",
+      "desc": "Modern, premium, confident. See-through display type over a rising-levels scene. Feels like the firm a founder hires before the big deal."
+    }
+  ],
+  "offerIntro": "Three ways in. Every tier fixes the critical audit items — the difference is how far up the echelon you want to climb.",
+  "offerTiers": [
+    {
+      "name": "Foundation",
+      "price": "$1,500",
+      "priceNote": "one-time",
+      "sub": "Fix the platform · 1 week",
+      "items": [
+        "Premium 8-page rebuild (either concept — The Ascent or Echelon Rising)",
+        "Practice-area pages + attorney bio & Florida Bar #124755 credential",
+        "Review showcase — the 4.6★ rating, finally visible on-site",
+        "Privacy & legal pages rebuilt — the roadside-assistance boilerplate gone day one",
+        "Calendly integration preserved"
+      ]
+    },
+    {
+      "name": "Local Dominance",
+      "price": "$3,000",
+      "priceNote": "one-time",
+      "sub": "Foundation + own Weston · 2-3 weeks",
+      "recommended": true,
+      "items": [
+        "Everything in Foundation (12+ pages)",
+        "Weston / Broward / Miami-Dade landing pages",
+        "Google Business Profile optimization",
+        "Directory cleanup & consistency (Justia, Yelp, Avvo)",
+        "Full Spanish version (/es/)",
+        "Review-request engine",
+        "Monthly growth retainer"
+      ]
+    },
+    {
+      "name": "The Echelon System",
+      "price": "$5,000",
+      "priceNote": "+ $500/mo",
+      "sub": "Everything, plus a growth machine",
+      "items": [
+        "Everything in Local Dominance",
+        "AI intake assistant (24/7 qualify, book, brief)",
+        "Monthly content engine (practice-area articles)",
+        "Live client dashboard — rankings, calls, bookings",
+        "Quarterly competitive re-audit (this document, refreshed)",
+        "Priority support & iteration"
+      ]
+    }
+  ],
+  "offerWhyNow": "The closest competitor's site hasn't been touched since 2024, and nobody in Weston has a modern platform yet. First mover owns the impression. The deposit locks the build slot; Foundation delivers inside one week."
 }
