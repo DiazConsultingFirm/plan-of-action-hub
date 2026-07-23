@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { daysUntil, countdownLabel } from './dates'
-import { RhythmTab, FunnelTab, ContentTab, AuditTab, MilestonesTab, PitchTab } from './PlanTabs'
+import { RhythmTab, FunnelTab, ContentTab, AuditTab, MilestonesTab, PitchTab, DashboardsTab } from './PlanTabs'
 
 const TAB_LABELS = {
   full: 'Full Plan',
@@ -11,6 +11,7 @@ const TAB_LABELS = {
   audit: 'Site Audit',
   milestones: '30/60/90',
   pitch: 'Pitch',
+  dashboards: 'Dashboards',
 }
 
 const TAB_COMPONENTS = {
@@ -20,6 +21,7 @@ const TAB_COMPONENTS = {
   audit: AuditTab,
   milestones: MilestonesTab,
   pitch: PitchTab,
+  dashboards: DashboardsTab,
 }
 
 /* The whole plan as one continuous document — the original static Plan of
@@ -40,8 +42,16 @@ function FullPlan({ data, sections }) {
   )
 }
 
+// The Dashboards tab links to localhost:8045 (Pipeline Hub, Command Center,
+// client work samples) — real only when this page is opened through the local
+// Command Center. On the public GitHub Pages copy those links dead-end for
+// anyone but Evans on his own machine, so the tab hides itself there instead
+// of shipping a second build.
+const isLocalHost = /^(localhost|127\.0\.0\.1)$/.test(window.location.hostname)
+
 export default function PlanView({ data, roster, onHome, onSwitch }) {
-  const sections = data.plan.tabs?.length ? data.plan.tabs : Object.keys(TAB_COMPONENTS)
+  const allSections = data.plan.tabs?.length ? data.plan.tabs : Object.keys(TAB_COMPONENTS)
+  const sections = isLocalHost ? allSections : allSections.filter((t) => t !== 'dashboards')
   const tabs = ['full', ...sections]
   const [activeTab, setActiveTab] = useState('full')
   const days = daysUntil(data.plan.interviewDate)

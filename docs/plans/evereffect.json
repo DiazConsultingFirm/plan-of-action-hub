@@ -22,7 +22,8 @@
       "content",
       "audit",
       "milestones",
-      "pitch"
+      "pitch",
+      "dashboards"
     ],
     "dataNote": "Volume and conversion figures on the Funnel tab are targets Evans is proposing and committing to — not EverEffect internals. No internal agency numbers were available before the call. Every named account, trigger and site finding is publicly sourced and dated.",
     "repoUrl": "",
@@ -35,6 +36,26 @@
       {
         "label": "Diaz Consulting Firm",
         "url": "https://diazconsultingfirm.github.io/"
+      }
+    ],
+    "dashboards": [
+      {
+        "label": "Pipeline Hub",
+        "url": "http://localhost:8045/pipeline-hub/",
+        "note": "Prospecting dashboard — EverEffect research already built into the FusionAuth/EverEffect/Guesty work-sample tabs.",
+        "icon": "📊"
+      },
+      {
+        "label": "Client Research — Echelon Legal",
+        "url": "http://localhost:8045/client-research/echelon/dashboard.html",
+        "note": "Real site-audit + offer-tier pitch built for a prospect — the exact type of ‘quickly audit a business’ work this role is testing for.",
+        "icon": "🔍"
+      },
+      {
+        "label": "DCF Command Center",
+        "url": "http://localhost:8045/",
+        "note": "Live operations dashboard — shows the systems/rigor behind how DCF actually runs.",
+        "icon": "🎛️"
       }
     ]
   },

@@ -472,6 +472,55 @@ export function PitchTab({ data }) {
   )
 }
 
+/* Real work-sample dashboards — the type of research/audit work we actually
+   do for clients (e.g. the Echelon Legal site audit), kept as a curated list
+   per-plan in plan.dashboards so it's easy to pull one up live on a call if
+   asked "can you show me an example." Links point at the same Command Center
+   local server (localhost:8045) this app itself is served through when
+   opened via Open-Command-Center.bat, so they resolve same-origin. */
+export function DashboardsTab({ data }) {
+  const dashboards = data.plan.dashboards || []
+
+  return (
+    <Tab>
+      <GlassCard>
+        <SectionHead
+          badge="◫"
+          title="Dashboards — Work Samples"
+          badgeStyle={{ background: 'linear-gradient(135deg,#1B3A4B,#0F2836)', color: '#E8A838' }}
+        />
+        <p style={{ fontSize: 12.5, color: 'var(--text-dim)', marginBottom: 14, lineHeight: 1.5 }}>
+          Real, live examples of the research and audit work DCF does for clients — the kind of
+          thing worth pulling up on the call if they ask to see an example.
+        </p>
+        {dashboards.length > 0 ? (
+          <div className="dash-grid">
+            {dashboards.map((d, i) => (
+              <motion.a
+                key={i}
+                className="dash-card"
+                href={d.url}
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.06 }}
+              >
+                <span className="dash-card-icon">{d.icon || '📊'}</span>
+                <span className="dash-card-title">{d.label}</span>
+                {d.note && <span className="dash-card-note">{d.note}</span>}
+                <span className="dash-card-arrow">Open ↗</span>
+              </motion.a>
+            ))}
+          </div>
+        ) : (
+          <p style={{ fontSize: 12, color: 'var(--text-muted)', fontStyle: 'italic' }}>
+            No dashboards linked for this plan yet.
+          </p>
+        )}
+      </GlassCard>
+    </Tab>
+  )
+}
+
 function MetaRow({ label, value }) {
   return (
     <div className="pitch-meta-row">

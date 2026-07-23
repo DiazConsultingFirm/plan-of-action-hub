@@ -23,7 +23,8 @@
       "funnel",
       "content",
       "milestones",
-      "pitch"
+      "pitch",
+      "dashboards"
     ],
     "links": [
       {
@@ -33,6 +34,26 @@
       {
         "label": "Diaz Consulting Firm",
         "url": "https://diazconsultingfirm.github.io/"
+      }
+    ],
+    "dashboards": [
+      {
+        "label": "Pipeline Hub",
+        "url": "http://localhost:8045/pipeline-hub/",
+        "note": "Prospecting dashboard — FusionAuth research, battlecard, and work samples.",
+        "icon": "📊"
+      },
+      {
+        "label": "Client Research — Echelon Legal",
+        "url": "http://localhost:8045/client-research/echelon/dashboard.html",
+        "note": "Real site-audit + offer-tier pitch built for a prospect — a concrete example of the audit-first work this posting asks for.",
+        "icon": "🔍"
+      },
+      {
+        "label": "DCF Command Center",
+        "url": "http://localhost:8045/",
+        "note": "Live operations dashboard — the systems/rigor behind how DCF actually runs.",
+        "icon": "🎛️"
       }
     ]
   },
