@@ -974,7 +974,7 @@
 
 /* ── SCROLL / RESPONSIVE ── */
 
-.main-content { overflow-y: auto; }
+.main-content { overflow-y: auto; min-height: 0; }
 
 .audit-hero-wrap { padding: 20px 24px 0; }
 @media (max-width: 720px) {
