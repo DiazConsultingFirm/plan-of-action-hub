@@ -67,9 +67,9 @@ export default function PlanView({ data, roster, onHome, onSwitch }) {
   const sections = isLocalHost ? allSections : allSections.filter((t) => t !== 'dashboards')
   const tabs = ['full', ...sections]
   const [activeTab, setActiveTab] = useState('full')
-  const isConsulting = data.plan.kind === 'consulting'
-  const days = isConsulting ? null : daysUntil(data.plan.interviewDate)
-  const { num, lbl } = isConsulting ? {} : countdownLabel(days)
+  const isDateless = data.plan.kind === 'consulting' || data.plan.kind === 'client'
+  const days = isDateless ? null : daysUntil(data.plan.interviewDate)
+  const { num, lbl } = isDateless ? {} : countdownLabel(days)
   const ActiveTab = TAB_COMPONENTS[activeTab]
 
   return (
@@ -107,7 +107,7 @@ export default function PlanView({ data, roster, onHome, onSwitch }) {
         </div>
 
         <div className="topbar-right">
-          {isConsulting ? (
+          {isDateless ? (
             <span className="health-indicator">
               <span className="health-dot dot-green" />
               <span className="health-label">{data.plan.pitchDateLabel}</span>

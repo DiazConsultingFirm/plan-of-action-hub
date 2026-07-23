@@ -67,6 +67,7 @@
     },
     {
       "id": "gerlach",
+      "file": "gerlach.json",
       "company": "Gerlach Law, PLLC",
       "role": "Family Law & Juvenile Dependency",
       "mark": "GL",
@@ -97,6 +98,7 @@
     },
     {
       "id": "robert-davis",
+      "file": "robert-davis.json",
       "company": "Robert Davis P.A.",
       "role": "Estate Planning & Elder Law",
       "mark": "RD",

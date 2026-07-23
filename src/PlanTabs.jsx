@@ -642,10 +642,24 @@ export function DashboardTab({ data }) {
           }}
         />
         <p className="audit-intro">
-          {data.plan.kind === 'consulting'
+          {data.plan.kind === 'client'
+            ? "The same tracker view as the live client dashboard below — the punch list and metrics on this tab mirror what's actually being worked, not a mockup."
+            : data.plan.kind === 'consulting'
             ? 'The same live-dashboard discipline DCF runs for every retained client — rankings, calls, and bookings tracked from day one, not guessed at by month three.'
             : "Not a live product — a plain view of what proves the plan is working, checked the same way every week. This is what I'd actually be tracking, not a slide."}
         </p>
+
+        {data.plan.kind === 'client' && data.plan.liveDashboardUrl && (
+          <a
+            className="plan-link-btn"
+            href={data.plan.liveDashboardUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ display: 'inline-block', marginBottom: 14 }}
+          >
+            Open the live dashboard ↗
+          </a>
+        )}
 
         <MetricRow metrics={data.metrics} />
 
@@ -783,8 +797,12 @@ export function PitchTab({ data }) {
         <div className="pitch-meta">
           <MetaRow label="Author" value={data.plan.author} />
           <MetaRow
-            label={data.plan.kind === 'consulting' ? 'Status' : 'Interview'}
-            value={data.plan.kind === 'consulting' ? data.plan.pitchDateLabel : data.plan.interviewLabel}
+            label={data.plan.kind === 'consulting' || data.plan.kind === 'client' ? 'Status' : 'Interview'}
+            value={
+              data.plan.kind === 'consulting' || data.plan.kind === 'client'
+                ? data.plan.pitchDateLabel
+                : data.plan.interviewLabel
+            }
           />
           {data.plan.contact && <MetaRow label="Contact" value={data.plan.contact} />}
           <MetaRow label="Version" value={`${data.plan.version} · ${data.plan.date}`} />

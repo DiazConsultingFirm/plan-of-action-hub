@@ -1,0 +1,178 @@
+{
+  "plan": {
+    "id": "robert-davis",
+    "kind": "client",
+    "company": "Robert Davis P.A.",
+    "role": "Estate Planning & Elder Law",
+    "mark": "RD",
+    "accent": "#14B8A6",
+    "title": "Robert Davis P.A. — Growth Plan & Dashboard",
+    "subtitle": "12-Month Client Acquisition Plan",
+    "audience": "For Robert Davis, Esq. · Fort Lauderdale, FL",
+    "author": "Evans Diaz · DCF",
+    "date": "July 2026",
+    "version": "v1.0",
+    "status": "ready",
+    "statusLabel": "Active Client",
+    "stage": "Active Client",
+    "pitchDate": "2026-07-12",
+    "pitchDateLabel": "Live since May 21, 2026 · Growth plan locked Jul 12",
+    "tabs": ["audit", "milestones", "offer", "yourdashboard", "pitch"],
+    "milestonesTitle": "The 12-Month Plan — Q3 2026 → Q2 2027",
+    "contact": "Robert Davis, Esq. · robert@robertdavispa.com · (954) 444-4924",
+    "links": [
+      { "label": "Robert Davis P.A. — the live site", "url": "https://robertdavispa.com/" },
+      { "label": "Diaz Consulting Firm", "url": "https://diazconsultingfirm.github.io/" }
+    ],
+    "heroHeadline": "Robert Davis P.A. is a |live site with a paused growth engine.",
+    "heroSub": "Phase 1 shipped May 21 — 10 practice areas, GA4, GBP, directories, all verified working. The foundation is real; what's next is the clone content engine and the retainer that funds it.",
+    "heroPreparedFor": "Robert Davis, Esq. · 2026-07-12"
+  },
+  "metrics": [
+    { "val": "$1,500", "lbl": "Phase 1 total" },
+    { "val": "$500", "lbl": "Balance remaining" },
+    { "val": "$1,500/mo", "lbl": "Phase 2 retainer (unsigned)" },
+    { "val": "10", "lbl": "Practice areas live" }
+  ],
+  "auditFindings": {
+    "label": "robertdavispa.com — engagement status, 2026-07-12",
+    "intro": "Phase 1 is real and live — the gap isn't the site, it's the engine that was scoped to start running the day it shipped.",
+    "sourceLine": "Source: Notion Master Plan session log, 2026-07-12, verified against payment records.",
+    "headline": [
+      { "val": "7 wks", "lbl": "Site live with zero posts" },
+      { "val": "$500", "lbl": "Balance outstanding" },
+      { "val": "0", "lbl": "Reviews via the new engine" },
+      { "val": "10", "lbl": "Practice-area pages live" }
+    ],
+    "findings": [
+      {
+        "severity": "high",
+        "title": "Site live 7 weeks with zero content posts",
+        "detail": "Phase 1 shipped May 21, 2026. The clone content engine (LinkedIn, Instagram, GBP, 3 posts a week) was scoped to start the same week — it didn't. Retainer value is invisible without a running engine.",
+        "fix": "Launch the first two weeks of content immediately — 6 posts are already built from the 3 recording-guide videos, 3 cuts per video.",
+        "evidence": "Site live since 2026-05-21 with zero published posts as of the 2026-07-12 audit — a 7-week gap between infrastructure shipping and content starting.",
+        "evidenceSource": "Notion Master Plan session log, 2026-07-12."
+      },
+      {
+        "severity": "high",
+        "title": "GBP video verification stuck for weeks",
+        "detail": "One short call with Robert — video plus the final $500 plus the retainer signature — unblocks Google Screened/LSA eligibility and the outstanding balance at once. It has been pending since 2026-06-22.",
+        "fix": "Batch the ask into a single call: video verification, final payment, retainer signature, letterhead pick — not four separate follow-ups.",
+        "evidence": "GBP video verification has been pending since 2026-06-22 with no call scheduled.",
+        "evidenceSource": "Client contact log, verified 2026-07-12."
+      },
+      {
+        "severity": "working",
+        "title": "Phase 1 foundation is genuinely complete",
+        "detail": "10 practice-area pages (18 pages total), GA4 (G-E8025QNP62), GSC, GBP fields, Avvo + Justia listings, logo/og:image/FAQ schema — all live and verified, not promised."
+      },
+      {
+        "severity": "working",
+        "title": "Review-request engine is built and ready",
+        "detail": "Day-0 SMS+email, day-3 follow-up flow, targeting 25+ reviews by October — built and waiting on the content engine to start driving matters through it."
+      }
+    ]
+  },
+  "phases": [
+    {
+      "num": "Q3 2026",
+      "color": "blue",
+      "sub": "Close the Foundation",
+      "items": [
+        "GBP video verification — one call: video + final $500 + retainer signature + letterhead pick",
+        "Clone content engine live at 3 posts/week across LinkedIn, Instagram, GBP",
+        "Review-request engine running — target 25+ reviews by October",
+        "Directory blitz: Martindale, FindLaw, Lawyers.com, Yelp, Facebook, LinkedIn",
+        "First monthly SEO report delivered"
+      ]
+    },
+    {
+      "num": "Q4 2026",
+      "color": "amber",
+      "sub": "Widen Local Coverage",
+      "items": [
+        "30+ Broward city pages published",
+        "Spanish /es/ version live",
+        "Google Screened / Local Services Ads application submitted",
+        "Voice agent pilot — Retell + ElevenLabs, using the same clone audio"
+      ]
+    },
+    {
+      "num": "Q1–Q2 2027",
+      "color": "green",
+      "sub": "Paid + Authority",
+      "items": [
+        "LSA pay-per-call and Search Ads on DUI/DV keywords, tracked by cost-per-signed-case",
+        "Weekly YouTube Shorts and retargeting from the clone content engine",
+        "Avvo Q&A 3x/week, Justia guides, JD Supra, Super Lawyers, NCDD/FACDL listings",
+        "Quarterly business review with a motion-pipeline upsell conversation"
+      ]
+    }
+  ],
+  "phaseProof": "This is the proof-of-concept for DCF's Legal Lead Engine — every playbook item here becomes the template for the next law-firm client, including the two already asked for by name (Gerlach Law, Echelon Legal). If a quarter slips, the reason is a named blocker, not a guess — the GBP call above is the one holding Q3 open right now.",
+  "closingPoints": [
+    "Phase 1 is real and live — 10 practice areas, GA4, GSC, GBP, directory listings, all verified working, not promised.",
+    "The gap isn't infrastructure, it's the content engine that was scoped to start the same week the site went live and didn't. Six posts are already built and ready to publish.",
+    "One call closes four things at once: GBP video verification, the final $500 balance, the Phase 2 retainer signature, and the letterhead decision.",
+    "The 12-month plan is already locked, quarter by quarter, through Q2 2027 — this isn't a plan waiting to be built, it's a plan waiting on one call.",
+    "Robert is the proof-of-concept for DCF's law-firm playbook — what works here becomes the template Gerlach and Echelon both inherit."
+  ],
+  "openQuestions": [
+    {
+      "q": "Which week works for the GBP video call — the one call that unblocks verification, the balance, and the retainer at once?",
+      "why": "This has been the single blocker holding Q3 open since 2026-06-22. Everything downstream (Google Screened, LSA, the retainer-funded engine) waits on this one call."
+    }
+  ],
+  "offerIntro": "Not a new pitch — this is what's already contracted, what's outstanding, and what unlocks the next phase.",
+  "offerTiers": [
+    {
+      "name": "Phase 1 — Contracted",
+      "price": "$1,500",
+      "priceNote": "total, live since May 2026",
+      "sub": "Foundation",
+      "items": [
+        "10 practice-area pages, 18 pages total",
+        "GA4, GSC, GBP fields all configured",
+        "Avvo + Justia listings, logo, FAQ schema",
+        "$500 remaining on this balance"
+      ]
+    },
+    {
+      "name": "Phase 2 — Proposed Retainer",
+      "price": "$1,500",
+      "priceNote": "/mo, not yet signed",
+      "sub": "The growth engine",
+      "recommended": true,
+      "items": [
+        "3x/week clone content engine (LinkedIn, IG, GBP)",
+        "Review-request engine, target 25+ by October",
+        "Monthly SEO report",
+        "30+ Broward city pages + Spanish /es/ version in Q4"
+      ]
+    }
+  ],
+  "offerWhyNow": "The foundation has been live for seven weeks with the retainer-funded engine still off. Every week without it is a week of Phase 1's value going unproven — the one call above starts all of it at once.",
+  "activityLog": [
+    {
+      "date": "2026-07-23",
+      "action": "build",
+      "label": "Added to the Plan of Action Hub as a full plan",
+      "detail": "Robert Davis P.A. upgraded from a roster link-out to a full in-hub plan — audit, milestones, offer, and dashboard — same system as every other plan in the hub.",
+      "icon": "dashboard"
+    },
+    {
+      "date": "2026-07-12",
+      "action": "build",
+      "label": "12-month growth strategy locked",
+      "detail": "Full engagement audit and quarterly acquisition plan (Q3 2026 → Q2 2027) logged to the Notion Master Plan. Q3 execution kit built: SEO report template, 7 directory profiles, review-request flow, first-2-weeks content calendar.",
+      "icon": "build"
+    },
+    {
+      "date": "2026-05-21",
+      "action": "build",
+      "label": "Phase 1 goes live",
+      "detail": "robertdavispa.com live on Netlify with 10 practice-area pages, GA4, GSC, GBP fields, Avvo + Justia listings, logo, og:image, and FAQ schema.",
+      "icon": "dashboard"
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "plan": {
+    "id": "gerlach",
+    "kind": "client",
+    "company": "Gerlach Law, PLLC",
+    "role": "Family Law & Juvenile Dependency",
+    "mark": "GL",
+    "accent": "#A855F7",
+    "title": "Gerlach Law — Site Status & Growth Plan",
+    "subtitle": "Live Site + 12-Month Growth Plan",
+    "audience": "For Angela E. Gerlach, Esq. · Fort Lauderdale, FL",
+    "author": "Evans Diaz · DCF",
+    "date": "July 2026",
+    "version": "v1.0",
+    "status": "ready",
+    "statusLabel": "Active Client",
+    "stage": "Active Client",
+    "pitchDate": "2026-07-12",
+    "pitchDateLabel": "Live since Jul 13, 2026 · Growth plan locked Jul 12",
+    "tabs": ["audit", "milestones", "offer", "yourdashboard", "pitch"],
+    "milestonesTitle": "The Next 90 Days — Post-Launch Punch List",
+    "contact": "Angela E. Gerlach, Esq. · Angela@gerlachlegal.com · Yuly Fiallo (assistant) · (954) 233-0755",
+    "liveDashboardUrl": "https://diazconsultingfirm.github.io/gerlachlegal-website/dashboard/",
+    "links": [
+      { "label": "Gerlach Law — the live site", "url": "https://gerlachlegal.com" },
+      { "label": "Diaz Consulting Firm", "url": "https://diazconsultingfirm.github.io/" }
+    ],
+    "heroHeadline": "Gerlach Law is |live — the growth plan starts now.",
+    "heroSub": "gerlachlegal.com went live July 13 on a static passthrough build. The launch blockers are cleared; what's left is the go-live kit and the 12-month growth plan already locked.",
+    "heroPreparedFor": "Angela E. Gerlach, Esq. · 2026-07-12"
+  },
+  "metrics": [
+    { "val": "31%", "lbl": "Engagement complete" },
+    { "val": "$2,000", "lbl": "Total contract" },
+    { "val": "Live", "lbl": "Site status" },
+    { "val": "200", "lbl": "HTTP status, verified" }
+  ],
+  "auditFindings": {
+    "label": "gerlachlegal.com — post-launch status, 2026-07-17",
+    "intro": "The site is genuinely live and verified working — the open items now are the go-live kit and a few client-side decisions, not a broken build.",
+    "sourceLine": "Source: live re-check of gerlachlegal.com, 2026-07-17, and the 2026-07-12 engagement audit.",
+    "headline": [
+      { "val": "200", "lbl": "HTTP status, verified live" },
+      { "val": "0", "lbl": "WordPress/Divi markers left" },
+      { "val": "0", "lbl": "Testimonials collected" },
+      { "val": "2", "lbl": "Fonts mismatched, print vs. web" }
+    ],
+    "findings": [
+      {
+        "severity": "high",
+        "title": "Zero testimonials collected",
+        "detail": "The site has no client reviews or testimonials live anywhere, and none have been collected yet through a formal ask.",
+        "fix": "Stand up a review-request flow the same way it's built for Robert Davis — day-0 ask, day-3 follow-up.",
+        "evidence": "Zero testimonials collected as of the 2026-07-12 engagement audit — no request flow has been run yet.",
+        "evidenceSource": "Notion Master Plan session log, 2026-07-12."
+      },
+      {
+        "severity": "high",
+        "title": "Brand font mismatch, print vs. web",
+        "detail": "Print materials use Cormorant; the live site uses Playfair. Same brand, two different typefaces depending on where you see it.",
+        "fix": "Standardize on one typeface across both, or confirm the print/web split is intentional.",
+        "evidence": "Print collateral uses Cormorant; gerlachlegal.com uses Playfair Display — flagged as unresolved in the 2026-07-12 audit.",
+        "evidenceSource": "Engagement audit, 2026-07-12."
+      },
+      {
+        "severity": "working",
+        "title": "Site verified live and clean",
+        "detail": "gerlachlegal.com returns HTTP 200 with the correct Gerlach Law title, zero WordPress or Divi markers, and Cloudflare serving the static build correctly — re-checked 2026-07-17."
+      },
+      {
+        "severity": "working",
+        "title": "GA4 setup has zero blockers on DCF's side",
+        "detail": "The GA4 property setup is entirely DCF-side work with nothing waiting on Angela — it's a matter of scheduling it, not chasing anyone."
+      }
+    ]
+  },
+  "phases": [
+    {
+      "num": "Immediate",
+      "color": "blue",
+      "sub": "Go-Live Kit — DCF Side, Zero Blockers",
+      "items": [
+        "GA4 property ID swapped into the live site",
+        "Google Search Console + Google Business Profile fields confirmed",
+        "www variant redirect checked",
+        "Client dashboard (built Jul 10) shared with Angela for the first time"
+      ]
+    },
+    {
+      "num": "Client-Side",
+      "color": "amber",
+      "sub": "Waiting on Angela / Yuly",
+      "items": [
+        "Logo PNG/SVG from Yuly for the final brand pass",
+        "Cal.com hours confirmed (5pm→6pm) and paid-vs-free consult direction decided",
+        "Final balance and Phase 2 retainer pricing reconciled together"
+      ]
+    },
+    {
+      "num": "Growth Phase",
+      "color": "green",
+      "sub": "Once the Above Clears",
+      "items": [
+        "Review-request flow launched — zero testimonials today, target a real number within the first quarter",
+        "Brand font standardized across print and web",
+        "12-month growth plan (locked 2026-07-12) begins executing"
+      ]
+    }
+  ],
+  "phaseProof": "The launch blocker turned out to be a misdiagnosis, not a real wall — the DNS was never the issue, and the site has been live and verified since July 13. What's left is a short, named list: three things on DCF's side with zero blockers, three things waiting on a decision from Angela or Yuly. Nothing here is open-ended.",
+  "closingPoints": [
+    "gerlachlegal.com is live, verified, and clean — re-checked July 17, HTTP 200, zero legacy WordPress markers.",
+    "The remaining punch list is short and named, not vague — the GA4 swap and the dashboard share are entirely on DCF's side with nothing blocking them.",
+    "Three items sit with Angela and Yuly: the logo files, the Cal.com hours decision, and reconciling the final balance with Phase 2 retainer pricing.",
+    "The 12-month growth plan is already locked from the July 12 engagement audit — it starts executing the moment the punch list above clears.",
+    "Robert Davis P.A. is running the same playbook one quarter ahead — what works there, like the review-request flow and the content cadence, transfers directly here."
+  ],
+  "openQuestions": [
+    {
+      "q": "Should the final balance and the Phase 2 retainer be priced and signed together in one conversation, or handled separately?",
+      "why": "Both have been open since before launch — batching them into one ask, the same way it's working for Robert Davis, is faster than two separate follow-ups."
+    }
+  ],
+  "offerIntro": "Not a new pitch — this is what's contracted, what's still open, and what Phase 2 would add once it's priced.",
+  "offerTiers": [
+    {
+      "name": "Phase 1 — Contracted",
+      "price": "$2,000",
+      "priceNote": "total contract, $1,000 deposit received",
+      "sub": "The live build",
+      "items": [
+        "Static site live since July 13, verified clean",
+        "GoDaddy Managed WordPress passthrough build",
+        "Balance and final pricing pending reconciliation with Angela"
+      ]
+    },
+    {
+      "name": "Phase 2 — Growth Plan",
+      "price": "TBD",
+      "priceNote": "pricing not yet locked",
+      "sub": "Once the punch list clears",
+      "recommended": true,
+      "items": [
+        "12-month growth plan already scoped (locked 2026-07-12)",
+        "Review-request engine, same model built for Robert Davis",
+        "Brand consistency pass — one typeface across print and web"
+      ]
+    }
+  ],
+  "offerWhyNow": "The site has been live for over a week with the growth plan already scoped and waiting — the only thing between here and Phase 2 starting is a short list of named decisions, not new work.",
+  "activityLog": [
+    {
+      "date": "2026-07-23",
+      "action": "build",
+      "label": "Added to the Plan of Action Hub as a full plan",
+      "detail": "Gerlach Law upgraded from a roster link-out to a full in-hub plan — audit, milestones, offer, and dashboard — same system as every other plan in the hub.",
+      "icon": "dashboard"
+    },
+    {
+      "date": "2026-07-17",
+      "action": "build",
+      "label": "Infra health sweep — re-verified live",
+      "detail": "gerlachlegal.com confirmed HTTP 200, correct title, zero WordPress/Divi markers, 58 KB static homepage, Cloudflare serving the static build correctly.",
+      "icon": "build"
+    },
+    {
+      "date": "2026-07-13",
+      "action": "build",
+      "label": "gerlachlegal.com goes live",
+      "detail": "7-week DNS blocker resolved — misdiagnosed; no DNS change was needed. Passthrough theme solved the index.php/index.html conflict on GoDaddy Managed WordPress. Site live serving gerlach-v8.3 (commit b1c40e0).",
+      "icon": "dashboard"
+    },
+    {
+      "date": "2026-07-12",
+      "action": "build",
+      "label": "Full engagement audit + 12-month growth plan locked",
+      "detail": "Engagement at ~31% complete, one blocker (DNS) identified and later resolved. 12-month growth plan logged to the Notion Master Plan session log.",
+      "icon": "build"
+    }
+  ]
+}

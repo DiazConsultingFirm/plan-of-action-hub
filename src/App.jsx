@@ -65,10 +65,12 @@ export default function App() {
 
   const openPlan = useCallback(
     (entry) => {
-      // Client dashboards (Gerlach, Robert Davis) are separately-built, already-
-      // live apps — they don't have a plans/*.json to render in-hub. Link out
-      // instead of trying to fetch a plan file that doesn't exist for them.
-      if (entry.kind === 'client' && entry.external) {
+      // Client cards (Gerlach, Robert Davis) get the same in-hub Plan of
+      // Action page as everyone else once a plans/*.json exists for them —
+      // the Site/Dashboard buttons on the card itself are what link straight
+      // out to their real live pages. Only fall back to an external redirect
+      // for a client entry that doesn't have a plan file built yet.
+      if (entry.kind === 'client' && entry.external && !entry.file) {
         window.open(entry.external, '_blank', 'noopener')
         return
       }
