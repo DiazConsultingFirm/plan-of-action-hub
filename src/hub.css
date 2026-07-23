@@ -61,6 +61,19 @@
   background: radial-gradient(120% 88% at 50% 44%, transparent 42%, rgba(6, 10, 18, 0.72) 100%);
 }
 
+/* Light mode: the dark near-black vignette and gold-heavy motes read as dirt
+   on a white page, so both tone way down instead of carrying over unchanged. */
+:root[data-theme="light"] .backdrop-vignette {
+  background: radial-gradient(120% 88% at 50% 44%, transparent 55%, rgba(180, 190, 200, 0.35) 100%);
+}
+:root[data-theme="light"] .backdrop-motes,
+:root[data-theme="light"] .backdrop-motes-slow {
+  opacity: 0.35;
+}
+:root[data-theme="light"] .backdrop-glow {
+  opacity: 0.5;
+}
+
 @keyframes backdrop-drift {
   from { transform: translate3d(0, 0, 0); }
   to   { transform: translate3d(-340px, -340px, 0); }
@@ -102,7 +115,7 @@
   letter-spacing: -0.025em;
   line-height: 1.03;
   margin-top: 8px;
-  background: linear-gradient(120deg, #FFFFFF 0%, #E4E6EA 40%, var(--gold) 130%);
+  background: linear-gradient(120deg, var(--text) 0%, var(--text-dim) 40%, var(--gold) 130%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -229,8 +242,8 @@
   color: var(--text);
   padding: 8px 11px;
   border-radius: var(--radius-sm);
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.05);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
 }
 
 .plan-who {
@@ -251,7 +264,7 @@
   gap: 18px;
   flex-wrap: wrap;
   padding-top: 12px;
-  border-top: 1px solid rgba(255,255,255,0.05);
+  border-top: 1px solid var(--border);
 }
 
 .plan-headline-item .v {
@@ -305,7 +318,7 @@
   padding: 5px 11px;
   border-radius: 999px;
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.09);
+  border: 1px solid var(--border);
   color: var(--text-dim);
   cursor: pointer;
   transition: all 0.2s ease;
@@ -385,8 +398,8 @@
 .audit-item {
   padding: 14px 16px;
   border-radius: var(--radius-sm);
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.05);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
   border-left: 2px solid var(--text-muted);
   margin-bottom: 10px;
 }
@@ -409,13 +422,88 @@
 .audit-item-fix {
   margin-top: 9px;
   padding-top: 9px;
-  border-top: 1px dashed rgba(255,255,255,0.08);
+  border-top: 1px dashed var(--border);
   font-size: 12px;
   line-height: 1.55;
   color: var(--text);
 }
 
 .audit-item-fix strong { color: var(--green-glow); }
+
+/* ── AUDIT HERO (persistent banner across Site Audit / Where You Rank /
+   Competitors / The Plan / Concepts / The Offer / Your Dashboard) ── */
+
+.audit-hero {
+  padding: 28px 30px 22px;
+  margin-bottom: 16px;
+  border-radius: var(--radius);
+  background: linear-gradient(160deg, rgba(27,58,75,0.5) 0%, rgba(8,11,20,0.85) 70%);
+  border: 1px solid var(--glass-border);
+}
+
+.audit-hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.audit-hero-brand-mark {
+  font-family: 'Space Grotesk', var(--font);
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+  display: block;
+}
+
+.audit-hero-brand-sub {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.audit-hero-prepared {
+  text-align: right;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.audit-hero-headline {
+  font-family: 'Space Grotesk', var(--font);
+  font-size: clamp(24px, 3.4vw, 38px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  color: var(--text);
+}
+
+.audit-hero-headline em {
+  color: var(--gold);
+  font-style: italic;
+}
+
+.audit-hero-sub {
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-dim);
+  max-width: 68ch;
+}
+
+.audit-hero .audit-headline-row {
+  margin-top: 20px;
+  background: transparent;
+  border: none;
+  padding: 18px 0 0;
+  border-top: 1px solid var(--border);
+}
 
 .audit-source {
   font-size: 10.5px;
@@ -431,8 +519,8 @@
   margin: 14px 0 4px;
   padding: 14px 16px;
   border-radius: var(--radius-sm);
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.05);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
 }
 
 .audit-headline-stat { min-width: 84px; }
@@ -491,7 +579,7 @@
 .audit-table-wrap {
   overflow-x: auto;
   border-radius: var(--radius-sm);
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid var(--border);
 }
 
 .audit-table {
@@ -509,14 +597,14 @@
   text-transform: uppercase;
   color: var(--text-muted);
   padding: 10px 12px;
-  background: rgba(255,255,255,0.03);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
   white-space: nowrap;
 }
 
 .audit-table td {
   padding: 9px 12px;
-  border-bottom: 1px solid rgba(255,255,255,0.04);
+  border-bottom: 1px solid var(--border);
   color: var(--text-dim);
   vertical-align: top;
 }
@@ -545,8 +633,8 @@
 .concept-card {
   padding: 20px;
   border-radius: var(--radius-sm);
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.06);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
 }
 
 .concept-eyebrow {
@@ -584,8 +672,8 @@
   position: relative;
   padding: 20px;
   border-radius: var(--radius-sm);
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.06);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
 }
 
 .offer-card.offer-recommended {
@@ -649,7 +737,7 @@
   display: flex;
   gap: 16px;
   padding: 14px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid var(--border);
 }
 
 .dash-tracker-row:last-child { border-bottom: none; }
@@ -669,6 +757,104 @@
   text-transform: uppercase;
   letter-spacing: 0.06em;
   margin-bottom: 6px;
+}
+
+/* ── THEME TOGGLE (same mechanic as the Command Center) ── */
+
+.theme-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 50;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--gold);
+  transform: scale(1.05);
+}
+
+/* ── EVIDENCE FLIP CARDS (same CSS 3D-flip mechanic as the Command Center's
+   Next Actions cards — perspective + preserve-3d + rotateY, two absolutely
+   positioned faces with backface-visibility hidden) ── */
+
+.audit-item.has-evidence { cursor: pointer; }
+
+.audit-item-flip {
+  perspective: 1200px;
+}
+
+.audit-item-flip-inner {
+  position: relative;
+  min-height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.45s ease;
+}
+
+.audit-item-flip.flipped .audit-item-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.audit-item-face {
+  backface-visibility: hidden;
+}
+
+.audit-item-face-back {
+  position: absolute;
+  inset: 0;
+  transform: rotateY(180deg);
+  background: rgba(232,168,56,0.06);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  border-left: 2px solid var(--gold);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.evidence-label {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.evidence-quote {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text);
+  font-style: italic;
+}
+
+.evidence-quote::before { content: '\201C'; }
+.evidence-quote::after { content: '\201D'; }
+
+.evidence-source {
+  margin-top: auto;
+  padding-top: 10px;
+  font-size: 10.5px;
+  color: var(--text-muted);
+}
+
+.evidence-hint {
+  margin-top: 10px;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--gold);
 }
 
 /* ── OPEN QUESTIONS ── */
@@ -709,8 +895,8 @@
   gap: 9px;
   padding: 9px 12px;
   border-radius: var(--radius-sm);
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.05);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
   color: var(--text);
   text-decoration: none;
   font-size: 12px;
@@ -738,8 +924,8 @@
   gap: 6px;
   padding: 16px;
   border-radius: var(--radius-sm);
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.06);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
   color: var(--text);
   text-decoration: none;
   transition: all 0.2s ease;
@@ -758,6 +944,11 @@
 /* ── SCROLL / RESPONSIVE ── */
 
 .main-content { overflow-y: auto; }
+
+.audit-hero-wrap { padding: 20px 24px 0; }
+@media (max-width: 720px) {
+  .audit-hero-wrap { padding: 16px 16px 0; }
+}
 
 @media (max-width: 720px) {
   .hub-grid { grid-template-columns: 1fr; padding: 6px 16px 32px; }

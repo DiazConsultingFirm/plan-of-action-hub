@@ -8,11 +8,50 @@ import './hub.css'
 const ROSTER_URL = `${import.meta.env.BASE_URL}plans/index.json`
 const planUrl = (file) => `${import.meta.env.BASE_URL}plans/${file}`
 
+// Same mechanism as the Command Center's toggle: a data-theme attribute on
+// <html>, persisted to localStorage, read by index.html's anti-flash script
+// before React even mounts. Dark stays the default everyone has already
+// seen; light is the opt-in, not the other way around like Command Center —
+// this hub already shipped dark-only, so flipping the default would change
+// the look for every existing link out with no upside.
+function useTheme() {
+  const [theme, setTheme] = useState(
+    () => document.documentElement.getAttribute('data-theme') || 'dark',
+  )
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme)
+    try {
+      localStorage.setItem('poaTheme', theme)
+    } catch {
+      // localStorage can throw in private-browsing contexts — theme just
+      // won't persist across reloads, which is a fine degrade.
+    }
+  }, [theme])
+
+  return [theme, () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'))]
+}
+
+function ThemeToggle({ theme, onToggle }) {
+  return (
+    <button
+      type="button"
+      className="theme-toggle"
+      onClick={onToggle}
+      aria-label="Toggle dark mode"
+      title="Toggle dark mode"
+    >
+      {theme === 'dark' ? '☀️' : '🌙'}
+    </button>
+  )
+}
+
 export default function App() {
   const [roster, setRoster] = useState(null)
   const [activeId, setActiveId] = useState(null)
   const [planCache, setPlanCache] = useState({})
   const [error, setError] = useState(null)
+  const [theme, toggleTheme] = useTheme()
 
   useEffect(() => {
     fetch(ROSTER_URL)
@@ -51,6 +90,7 @@ export default function App() {
   return (
     <div className="app-shell">
       {!flat && <Backdrop />}
+      <ThemeToggle theme={theme} onToggle={toggleTheme} />
       <div className="hud-overlay">
         {!activeEntry ? (
           <HubLanding roster={roster} onOpen={openPlan} />

@@ -44,7 +44,10 @@
       }
     ],
     "contact": "Alexander Karantzalis, Esq. · 954-548-3558 · alexander@echelonlegalfl.com",
-    "milestonesTitle": "The Plan — In the Order That Pays"
+    "milestonesTitle": "The Plan — In the Order That Pays",
+    "heroHeadline": "Echelon Legal is a 4.6★ firm with a |3-page website.",
+    "heroSub": "Your reputation is already excellent — but online, Weston can't find you. This is the audit, the ranking reality, and the plan to fix it. All data gathered live on July 19, 2026.",
+    "heroPreparedFor": "Alexander Karantzalis, Esq. · 2026-07-19"
   },
   "metrics": [
     {
@@ -319,31 +322,41 @@
         "severity": "critical",
         "title": "Privacy page belongs to a towing company",
         "detail": "The privacy policy still contains its template's original text: \"Call (978) 327-1339 for 24-hour roadside assistance.\" That is what Google displays when the privacy page appears in results.",
-        "fix": "Replace with a real, firm-specific privacy policy as part of the platform rebuild."
+        "fix": "Replace with a real, firm-specific privacy policy as part of the platform rebuild.",
+        "evidence": "Call (978) 327-1339 for 24-hour roadside assistance.",
+        "evidenceSource": "Found verbatim on echelonlegalfl.com's privacy policy page — the previous template's text was never replaced. Checked live 2026-07-19."
       },
       {
         "severity": "critical",
         "title": "Three pages. Total.",
         "detail": "Home, thank-you, privacy. No practice-area pages, no attorney bio, no content. Google has almost nothing to rank, and clients researching \"who is this lawyer?\" find nothing to build trust on.",
-        "fix": "8–12 page rebuild: dedicated pages for business, estate & trusts, real estate, and probate, plus a real bio page."
+        "fix": "8–12 page rebuild: dedicated pages for business, estate & trusts, real estate, and probate, plus a real bio page.",
+        "evidence": "Zero of the 8 checked Weston practice-area search results include Echelon Legal. Every competitor on the list has a dedicated local landing page; Echelon ranks for its own name only.",
+        "evidenceSource": "Localized Weston, FL search snapshot, 2026-07-19 — see the Where You Rank tab for the full result list."
       },
       {
         "severity": "high",
         "title": "The attorney's name isn't on the website",
         "detail": "\"Alexander Karantzalis\" appears nowhere on the homepage — no bio, no photo, no Florida Bar credential (#124755, good standing). People hire lawyers, not logos.",
-        "fix": "Attorney bio page with name, photo, and Bar credential, built into the rebuild."
+        "fix": "Attorney bio page with name, photo, and Bar credential, built into the rebuild.",
+        "evidence": "\"Alexander Karantzalis\" does not appear anywhere on the homepage — no bio, no photo, no Florida Bar #124755 credential.",
+        "evidenceSource": "Live crawl of echelonlegalfl.com homepage, 2026-07-19."
       },
       {
         "severity": "high",
         "title": "The 4.6★ reputation is invisible",
         "detail": "Real reviews exist (\"AK is the consummate professional!\") — none appear on the site. Every ranked competitor showcases theirs.",
-        "fix": "Live review showcase with star schema markup, plus a review-request engine to keep it growing."
+        "fix": "Live review showcase with star schema markup, plus a review-request engine to keep it growing.",
+        "evidence": "\"AK is the consummate professional!\" — a real client review, live on Google, never displayed anywhere on the firm's own site.",
+        "evidenceSource": "Google Business Profile reviews cross-checked against echelonlegalfl.com, 2026-07-19."
       },
       {
         "severity": "high",
         "title": "No Spanish version",
         "detail": "Broward and Miami-Dade are majority-bilingual markets. Direct competitor RHG Legal advertises Spanish fluency prominently; this site is English-only.",
-        "fix": "Full /es/ version as part of the Local Dominance tier."
+        "fix": "Full /es/ version as part of the Local Dominance tier.",
+        "evidence": "RHG Legal — the closest same-market competitor — already advertises Spanish fluency prominently. echelonlegalfl.com is English-only, in a county where Spanish is spoken in the majority of households.",
+        "evidenceSource": "Side-by-side crawl of echelonlegalfl.com vs. RHG Legal, 2026-07-19."
       },
       {
         "severity": "working",

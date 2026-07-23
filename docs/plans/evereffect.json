@@ -61,7 +61,10 @@
         "icon": "🎛️"
       }
     ],
-    "milestonesTitle": "The Plan — Milestones That Prove the Engine Works"
+    "milestonesTitle": "The Plan — Milestones That Prove the Engine Works",
+    "heroHeadline": "EverEffect is a top-3% Google Partner |that hasn't published in 14 months.",
+    "heroSub": "The reputation and the client work are real — the agency's own marketing hasn't kept pace. This is the site audit, the account research, and the plan, all built before the call.",
+    "heroPreparedFor": "Chris Bross, Thomas Heed & Collin · 2026-07-20"
   },
   "metrics": [
     {
@@ -279,19 +282,25 @@
         "severity": "critical",
         "title": "No gated asset anywhere on the site",
         "detail": "There is no lead magnet, so there is no email capture, so there is no list. The posting asks this seat to run high-volume email — into a list that does not exist yet.",
-        "fix": "Ship one gated asset tied to the merger-fragmentation thesis: a post-acquisition local search checklist. It doubles as the outreach attachment."
+        "fix": "Ship one gated asset tied to the merger-fragmentation thesis: a post-acquisition local search checklist. It doubles as the outreach attachment.",
+        "evidence": "Zero downloadable guides, checklists, templates, or lead magnets found anywhere on evereffect.com — no email-capture mechanism exists on the site at all.",
+        "evidenceSource": "Live crawl of evereffect.com, 2026-07-20."
       },
       {
         "severity": "high",
         "title": "Publishing stopped 14 months ago",
         "detail": "The newest blog post is dated May 29, 2025. For an agency selling content marketing and AI SEO, the site is the work sample — and right now it argues the opposite case.",
-        "fix": "Restart cadence in the first 30 days. Two posts a month, both built off real client outcomes rather than topic-generator filler."
+        "fix": "Restart cadence in the first 30 days. Two posts a month, both built off real client outcomes rather than topic-generator filler.",
+        "evidence": "The newest post on evereffect.com/blog is dated May 29, 2025 — 14 months before this audit.",
+        "evidenceSource": "evereffect.com/blog, checked live 2026-07-20."
       },
       {
         "severity": "high",
         "title": "Zero case studies carrying a number",
         "detail": "Every testimonial on the site is qualitative. The tagline is \"ROI-Driven Digital Marketing, Delivering Profits, Not Promises\" — and there is not one published figure backing it.",
-        "fix": "One numbers-bearing case study in the first 60 days, using an already-retained client. Classic Auto Insurance is a 15-plus year relationship; that story is sitting there unwritten."
+        "fix": "One numbers-bearing case study in the first 60 days, using an already-retained client. Classic Auto Insurance is a 15-plus year relationship; that story is sitting there unwritten.",
+        "evidence": "Every testimonial on the site is qualitative. Not one page publishes a percentage, a dollar figure, or a ranking result — despite the tagline \"Delivering Profits, Not Promises.\"",
+        "evidenceSource": "Full site crawl of evereffect.com, 2026-07-20."
       },
       {
         "severity": "working",

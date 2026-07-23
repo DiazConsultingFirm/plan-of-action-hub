@@ -3,8 +3,13 @@ import { motion } from 'framer-motion'
 import { daysUntil, countdownLabel } from './dates'
 import {
   RhythmTab, FunnelTab, ContentTab, AuditTab, RankingTab, CompetitorsTab,
-  MilestonesTab, ConceptsTab, OfferTab, DashboardTab, PitchTab, DashboardsTab,
+  MilestonesTab, ConceptsTab, OfferTab, DashboardTab, PitchTab, DashboardsTab, AuditHero,
 } from './PlanTabs'
+
+// Tabs that belong to the "audit cluster" — the hero banner (headline + stat
+// row, modelled on the real Echelon pitch page) stays visible above all of
+// these so the research depth doesn't reset to a small heading on every click.
+const AUDIT_CLUSTER = new Set(['audit', 'ranking', 'competitors', 'milestones', 'concepts', 'offer', 'yourdashboard'])
 
 const TAB_LABELS = {
   full: 'Full Plan',
@@ -122,6 +127,15 @@ export default function PlanView({ data, roster, onHome, onSwitch }) {
           <span className="topbar-version">{data.plan.version}</span>
         </div>
       </motion.header>
+
+      {/* The audit hero acts as an extended header for its cluster of tabs —
+          it renders above the tab row, same order as the real Echelon page
+          (dark headline banner, then the tab row, then content below it). */}
+      {AUDIT_CLUSTER.has(activeTab) && (
+        <div className="audit-hero-wrap">
+          <AuditHero data={data} />
+        </div>
+      )}
 
       <nav className="tabbar">
         {tabs.map((t) => (

@@ -1,6 +1,11 @@
 /* ═══════════════════════════════════════════
    GERLACH DASHBOARD — DCF Design System v1
-   Dark theme · Glassmorphism · 3D overlay
+   Dark theme (default) + light theme · Glassmorphism
+   Toggle mechanism matches the Command Center exactly:
+   an anti-flash inline script in index.html sets
+   data-theme from localStorage before first paint, then
+   :root[data-theme="light"] below overrides the dark
+   defaults. Same var names throughout the app either way.
    ═══════════════════════════════════════════ */
 
 :root {
@@ -12,9 +17,12 @@
   --gold-dim: #B8862A;
   --bg: #080B14;
   --bg-card: rgba(27,58,75,0.18);
+  --surface: #111f29;
+  --surface-2: #16283a;
   --glass: rgba(27,58,75,0.28);
   --glass-border: rgba(232,168,56,0.10);
   --glass-border-hover: rgba(232,168,56,0.28);
+  --border: #253844;
   --text: #E4E6EA;
   --text-dim: #8899AA;
   --text-muted: #556677;
@@ -26,6 +34,27 @@
   --radius-sm: 10px;
   --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* Light theme — same palette philosophy as the Command Center's toggle
+   (navy/gold constant, bg/surface/text/border flip). Applied when the user
+   picks light mode; dark stays the default look everyone has already seen. */
+:root[data-theme="light"] {
+  --bg: #F6F7F9;
+  --bg-card: #FFFFFF;
+  --surface: #FFFFFF;
+  --surface-2: #F0F2F5;
+  --glass: rgba(255,255,255,0.82);
+  --glass-border: rgba(27,58,75,0.10);
+  --glass-border-hover: rgba(232,168,56,0.45);
+  --border: #E2E6EA;
+  --text: #1C2733;
+  --text-dim: #46566A;
+  --text-muted: #66788A;
+  --red: #DC4C3F;
+  --red-glow: #E2574C;
+  --green: #2F9268;
+  --green-glow: #3FAE7A;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -1013,7 +1042,7 @@ body {
 
 .main-content::-webkit-scrollbar { width: 4px; }
 .main-content::-webkit-scrollbar-track { background: transparent; }
-.main-content::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.06); border-radius: 2px; }
+.main-content::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
 
 /* ═══════════════════════════════════════════
    FUSIONAUTH PLAN — Plan-specific overrides
@@ -1188,7 +1217,7 @@ body {
 /* ── SCROLLBAR ── */
 .main-content::-webkit-scrollbar { width: 4px; }
 .main-content::-webkit-scrollbar-track { background: transparent; }
-.main-content::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.06); border-radius: 2px; }
+.main-content::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 720px) {

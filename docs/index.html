@@ -5,11 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./favicon.svg" />
     <title>Plan of Action Hub — DCF</title>
+    <script>
+      // Anti-flash: apply the saved theme before first paint, same pattern as
+      // the Command Center — otherwise there's a flash of dark before the
+      // React app mounts and reads localStorage itself.
+      (function () {
+        try {
+          var saved = localStorage.getItem('poaTheme');
+          if (saved === 'dark' || saved === 'light') {
+            document.documentElement.setAttribute('data-theme', saved);
+          }
+        } catch (e) {}
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet" />
-    <script type="module" crossorigin src="./assets/index-xXpGmCw6.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CS7TthNt.css">
+    <script type="module" crossorigin src="./assets/index-CGJ7I700.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CGZi_tCq.css">
   </head>
   <body>
     <div id="root"></div>

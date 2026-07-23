@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 
 /* ── shared shells ── */
@@ -260,6 +261,40 @@ function SourceLine({ text }) {
   return <p className="audit-source">{text}</p>
 }
 
+/* Persistent hero for the audit-cluster tabs (Site Audit, Where You Rank,
+   Competitors, The Plan, Concepts, The Offer, Your Dashboard) — modelled on
+   the real Echelon Legal pitch page, which keeps one big headline + stat row
+   fixed above its own tab row so the depth stays visible no matter which
+   sub-tab is open, instead of resetting to a small heading each time. */
+export function AuditHero({ data }) {
+  const audit = data.auditFindings
+  if (!data.plan.heroHeadline || !audit) return null
+
+  return (
+    <div className="audit-hero">
+      <div className="audit-hero-top">
+        <div className="audit-hero-brand">
+          <span className="audit-hero-brand-mark">DCF</span>
+          <span className="audit-hero-brand-sub">Diaz Consulting Firm</span>
+        </div>
+        <div className="audit-hero-prepared">
+          Prepared for {data.plan.company}
+          {data.plan.heroPreparedFor && <><br />{data.plan.heroPreparedFor}</>}
+        </div>
+      </div>
+
+      <h1 className="audit-hero-headline">
+        {data.plan.heroHeadline.split('|').map((part, i) =>
+          i === 1 ? <em key={i}>{part}</em> : <span key={i}>{part}</span>,
+        )}
+      </h1>
+      {data.plan.heroSub && <p className="audit-hero-sub">{data.plan.heroSub}</p>}
+
+      <AuditHeadline stats={audit.headline} />
+    </div>
+  )
+}
+
 function AuditHeadline({ stats }) {
   if (!stats?.length) return null
   return (
@@ -274,6 +309,59 @@ function AuditHeadline({ stats }) {
   )
 }
 
+/* A finding with real quotable proof (a literal line copied from the source,
+   a hard number, a dated citation) flips to show that evidence front and
+   center instead of leaving it buried mid-paragraph in the narrative detail.
+   Findings without a distinct `evidence` field just don't flip — never
+   inventing proof that isn't there. Same CSS 3D-flip mechanic as the Command
+   Center's Next Actions cards. */
+function AuditItemCard({ f, severity, index }) {
+  const [flipped, setFlipped] = useState(false)
+  const hasEvidence = Boolean(f.evidence)
+
+  return (
+    <motion.div
+      className={`audit-item sev-${severity} ${hasEvidence ? 'has-evidence audit-item-flip' : ''} ${flipped ? 'flipped' : ''}`}
+      initial={{ opacity: 0, x: -8 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ delay: index * 0.06 }}
+      onClick={hasEvidence ? () => setFlipped((v) => !v) : undefined}
+      role={hasEvidence ? 'button' : undefined}
+      tabIndex={hasEvidence ? 0 : undefined}
+    >
+      {hasEvidence ? (
+        <div className="audit-item-flip-inner">
+          <div className="audit-item-face">
+            <div className="audit-item-title">{f.title}</div>
+            <div className="audit-item-detail">{f.detail}</div>
+            {f.fix && (
+              <div className="audit-item-fix">
+                <strong>Fix:</strong> {f.fix}
+              </div>
+            )}
+            <div className="evidence-hint">See the evidence ↗</div>
+          </div>
+          <div className="audit-item-face audit-item-face-back">
+            <div className="evidence-label">The evidence</div>
+            <p className="evidence-quote">{f.evidence}</p>
+            {f.evidenceSource && <div className="evidence-source">{f.evidenceSource}</div>}
+          </div>
+        </div>
+      ) : (
+        <>
+          <div className="audit-item-title">{f.title}</div>
+          <div className="audit-item-detail">{f.detail}</div>
+          {f.fix && (
+            <div className="audit-item-fix">
+              <strong>Fix:</strong> {f.fix}
+            </div>
+          )}
+        </>
+      )}
+    </motion.div>
+  )
+}
+
 function AuditFindingsGroup({ severity, items }) {
   if (!items?.length) return null
   return (
@@ -283,21 +371,7 @@ function AuditFindingsGroup({ severity, items }) {
         {SEVERITY_LABEL[severity]} ({items.length})
       </div>
       {items.map((f, i) => (
-        <motion.div
-          key={i}
-          className={`audit-item sev-${severity}`}
-          initial={{ opacity: 0, x: -8 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: i * 0.06 }}
-        >
-          <div className="audit-item-title">{f.title}</div>
-          <div className="audit-item-detail">{f.detail}</div>
-          {f.fix && (
-            <div className="audit-item-fix">
-              <strong>Fix:</strong> {f.fix}
-            </div>
-          )}
-        </motion.div>
+        <AuditItemCard key={i} f={f} severity={severity} index={i} />
       ))}
     </div>
   )
