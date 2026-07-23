@@ -28,7 +28,13 @@ export default function HubLanding({ roster, onOpen }) {
 
       <div className="hub-grid">
         {plans.map((p, i) => (
-          <PlanCard key={p.id} plan={p} index={i} onOpen={() => onOpen(p)} />
+          <PlanCard
+            key={p.id}
+            plan={p}
+            index={i}
+            onOpen={() => onOpen(p)}
+            onOpenDashboard={() => onOpen(p, 'yourdashboard')}
+          />
         ))}
       </div>
     </motion.div>
@@ -44,7 +50,7 @@ function stopAnd(fn) {
   }
 }
 
-function PlanCard({ plan, index, onOpen }) {
+function PlanCard({ plan, index, onOpen, onOpenDashboard }) {
   const isConsulting = plan.kind === 'consulting'
   const isClient = plan.kind === 'client'
   const isBadgeless = isConsulting || isClient
@@ -121,7 +127,7 @@ function PlanCard({ plan, index, onOpen }) {
               Site ↗
             </a>
           )}
-          {plan.dashboard && (
+          {plan.dashboard ? (
             <a
               className="plan-link-btn"
               href={plan.dashboard}
@@ -131,6 +137,12 @@ function PlanCard({ plan, index, onOpen }) {
             >
               Dashboard ↗
             </a>
+          ) : (
+            plan.file && (
+              <button type="button" className="plan-link-btn" onClick={stopAnd(onOpenDashboard)}>
+                Dashboard →
+              </button>
+            )
           )}
           {!plan.site && !plan.dashboard && (
             <span className="plan-card-open-hint">

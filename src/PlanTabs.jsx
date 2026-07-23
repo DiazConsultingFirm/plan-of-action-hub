@@ -634,7 +634,11 @@ export function DashboardTab({ data }) {
       <GlassCard>
         <SectionHead
           badge="◫"
-          title="Your Dashboard — Tracking the First 90 Days"
+          title={
+            data.plan.kind === 'client'
+              ? 'Your Dashboard — Tracking the Growth Plan'
+              : 'Your Dashboard — Tracking the First 90 Days'
+          }
           badgeStyle={{
             background: 'linear-gradient(135deg,#1B3A4B,#0F2836)',
             color: '#E8A838',

@@ -49,6 +49,7 @@ function ThemeToggle({ theme, onToggle }) {
 export default function App() {
   const [roster, setRoster] = useState(null)
   const [activeId, setActiveId] = useState(null)
+  const [initialTab, setInitialTab] = useState('full')
   const [planCache, setPlanCache] = useState({})
   const [error, setError] = useState(null)
   const [theme, toggleTheme] = useTheme()
@@ -64,7 +65,7 @@ export default function App() {
   }, [])
 
   const openPlan = useCallback(
-    (entry) => {
+    (entry, tab = 'full') => {
       // Client cards (Gerlach, Robert Davis) get the same in-hub Plan of
       // Action page as everyone else once a plans/*.json exists for them —
       // the Site/Dashboard buttons on the card itself are what link straight
@@ -75,6 +76,7 @@ export default function App() {
         return
       }
       setActiveId(entry.id)
+      setInitialTab(tab)
       if (planCache[entry.id]) return
       fetch(planUrl(entry.file))
         .then((r) => {
@@ -110,6 +112,7 @@ export default function App() {
             key={activeEntry.id}
             data={activeData}
             roster={roster}
+            initialTab={initialTab}
             onHome={() => setActiveId(null)}
             onSwitch={openPlan}
           />

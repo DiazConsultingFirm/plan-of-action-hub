@@ -62,11 +62,11 @@ function FullPlan({ data, sections }) {
 // of shipping a second build.
 const isLocalHost = /^(localhost|127\.0\.0\.1)$/.test(window.location.hostname)
 
-export default function PlanView({ data, roster, onHome, onSwitch }) {
+export default function PlanView({ data, roster, initialTab, onHome, onSwitch }) {
   const allSections = data.plan.tabs?.length ? data.plan.tabs : Object.keys(TAB_COMPONENTS)
   const sections = isLocalHost ? allSections : allSections.filter((t) => t !== 'dashboards')
   const tabs = ['full', ...sections]
-  const [activeTab, setActiveTab] = useState('full')
+  const [activeTab, setActiveTab] = useState(tabs.includes(initialTab) ? initialTab : 'full')
   const isDateless = data.plan.kind === 'consulting' || data.plan.kind === 'client'
   const days = isDateless ? null : daysUntil(data.plan.interviewDate)
   const { num, lbl } = isDateless ? {} : countdownLabel(days)
