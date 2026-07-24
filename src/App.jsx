@@ -46,6 +46,20 @@ function ThemeToggle({ theme, onToggle }) {
   )
 }
 
+// target="_top" matters here specifically: this hub is usually opened as an
+// in-page iframe tab inside the Command Center itself. A normal link would
+// navigate just the iframe (landing you on the CC's own homepage nested
+// inside the hub's own tab, which is confusing/wrong). _top breaks out and
+// navigates the real top-level window, so "back to Command Center" means
+// the same thing whether this hub is standalone or embedded.
+function CommandCenterLink() {
+  return (
+    <a href="http://localhost:8045/" target="_top" className="cc-home-link" title="Back to Command Center">
+      ← Command Center
+    </a>
+  )
+}
+
 export default function App() {
   const [roster, setRoster] = useState(null)
   const [activeId, setActiveId] = useState(null)
@@ -101,6 +115,10 @@ export default function App() {
   return (
     <div className="app-shell">
       {!flat && <Backdrop />}
+      {/* Only on the landing — inside a plan, the topbar's own "Command
+          Center ↗" link (next to "← Plan of Action Hub") covers this
+          without overlapping the topbar's title/back-link. */}
+      {!activeEntry && <CommandCenterLink />}
       <ThemeToggle theme={theme} onToggle={toggleTheme} />
       <div className="hud-overlay">
         {!activeEntry ? (

@@ -88,6 +88,15 @@ export default function PlanView({ data, roster, initialTab, onHome, onSwitch })
             <button type="button" className="hub-link-btn" onClick={onHome}>
               ← {roster.hub.title}
             </button>
+            <a
+              href="http://localhost:8045/"
+              target="_top"
+              className="hub-link-btn"
+              style={{ marginLeft: 14 }}
+              title="Back to Command Center"
+            >
+              Command Center ↗
+            </a>
             <h1 style={{ marginTop: 2 }}>{data.plan.title}</h1>
             <span className="topbar-sub">{data.plan.audience}</span>
           </div>

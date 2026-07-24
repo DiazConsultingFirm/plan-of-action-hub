@@ -33,7 +33,7 @@
   --radius: 14px;
   --radius-sm: 10px;
   --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-mono: 'IBM Plex Mono', 'Fira Code', monospace;
 }
 
 /* Light theme — same palette philosophy as the Command Center's toggle
@@ -1109,13 +1109,13 @@ body {
 .f-card.f-green::before { background: linear-gradient(90deg, var(--green), #34D399); }
 .f-card.f-purple::before { background: linear-gradient(90deg, var(--purple), #8B5CF6); }
 .f-card.f-pink::before { background: linear-gradient(90deg, #F472B6, #EC4899); }
-.f-letter { font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 800; margin-bottom: 6px; }
+.f-letter { font-family: 'Fraunces', sans-serif; font-size: 28px; font-weight: 800; margin-bottom: 6px; }
 .f-card.f-gold .f-letter { color: var(--gold); }
 .f-card.f-blue .f-letter { color: var(--blue); }
 .f-card.f-green .f-letter { color: var(--green); }
 .f-card.f-purple .f-letter { color: var(--purple); }
 .f-card.f-pink .f-letter { color: #F472B6; }
-.f-name { font-family: 'Space Grotesk', sans-serif; font-size: 12px; font-weight: 700; color: var(--text); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+.f-name { font-family: 'Fraunces', sans-serif; font-size: 12px; font-weight: 700; color: var(--text); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
 .f-desc { font-size: 11.5px; color: var(--text-dim); line-height: 1.55; }
 .f-desc strong { color: var(--text); }
 .f-action { font-size: 11.5px; color: var(--gold); margin-top: 8px; font-weight: 600; line-height: 1.5; }
@@ -1133,7 +1133,7 @@ body {
 .metric { background: rgba(27,58,75,0.28); border: 1px solid rgba(232,168,56,0.1); border-radius: 14px; padding: 18px 14px; text-align: center; position: relative; overflow: hidden; transition: border-color 0.2s; }
 .metric:hover { border-color: rgba(232,168,56,0.35); }
 .metric::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: 0.5; }
-.metric-val { font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 700; background: linear-gradient(180deg, var(--gold-glow) 0%, var(--gold) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.1; }
+.metric-val { font-family: 'Fraunces', sans-serif; font-size: 26px; font-weight: 700; background: linear-gradient(180deg, var(--gold-glow) 0%, var(--gold) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.1; }
 .metric-lbl { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 6px; font-weight: 500; }
 
 /* ── FUNNEL WRAP ── */
@@ -1146,8 +1146,8 @@ body {
 .funnel-bar.funnel-blue { background: linear-gradient(90deg, var(--blue), #3B82F6); }
 .funnel-bar.funnel-green { background: linear-gradient(90deg, var(--green), #34D399); }
 .funnel-bar.funnel-violet { background: linear-gradient(90deg, #8B5CF6, #A78BFA); }
-.funnel-num { margin-left: 14px; font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 700; color: var(--text); white-space: nowrap; }
-.funnel-math { margin-left: 8px; font-size: 11px; color: var(--text-muted); font-family: 'JetBrains Mono', monospace; white-space: nowrap; }
+.funnel-num { margin-left: 14px; font-family: 'Fraunces', sans-serif; font-size: 13px; font-weight: 700; color: var(--text); white-space: nowrap; }
+.funnel-math { margin-left: 8px; font-size: 11px; color: var(--text-muted); font-family: 'IBM Plex Mono', monospace; white-space: nowrap; }
 
 /* ── FUNNEL GATES & SOURCES ── */
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
@@ -1180,7 +1180,7 @@ body {
 .phase-card-blue::before { background: linear-gradient(90deg, var(--blue), #60A5FA); }
 .phase-card-amber::before { background: linear-gradient(90deg, var(--amber), var(--gold)); }
 .phase-card-green::before { background: linear-gradient(90deg, var(--green), #34D399); }
-.phase-num { font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 800; margin-bottom: 4px; }
+.phase-num { font-family: 'Fraunces', sans-serif; font-size: 20px; font-weight: 800; margin-bottom: 4px; }
 .phase-card-blue .phase-num { color: var(--blue); }
 .phase-card-amber .phase-num { color: var(--amber); }
 .phase-card-green .phase-num { color: var(--green); }
@@ -1212,7 +1212,7 @@ body {
 
 /* ── CTA ── */
 .cta { margin-top: 24px; text-align: center; }
-.cta-btn { background: linear-gradient(135deg, var(--gold) 0%, #D4922A 100%); color: var(--bg); border: none; padding: 14px 32px; border-radius: 12px; font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 700; cursor: pointer; letter-spacing: 0.02em; box-shadow: 0 8px 24px rgba(232,168,56,0.3); transition: transform 0.15s, box-shadow 0.15s; }
+.cta-btn { background: linear-gradient(135deg, var(--gold) 0%, #D4922A 100%); color: var(--bg); border: none; padding: 14px 32px; border-radius: 12px; font-family: 'Fraunces', sans-serif; font-size: 14px; font-weight: 700; cursor: pointer; letter-spacing: 0.02em; box-shadow: 0 8px 24px rgba(232,168,56,0.3); transition: transform 0.15s, box-shadow 0.15s; }
 .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 32px rgba(232,168,56,0.4); }
 
 /* ── SCROLLBAR ── */
